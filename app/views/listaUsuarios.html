@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html ng-app="listaUsuariosApp">
+ 
+<head></head>
+ 
+<body ng-controller="UsuariosCtrl">
+    
+        <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="usuarios"><u>bandeja</u></a> 
+                <a class="navbar-text">Bienvenido</a>
+            </div>
+        </div>
+
+       <div class="contenedorBotones">		
+        <button type="button" class="btn btn-default" name="eliminar">
+            <span class="glyphicon glyphicon-trash"> Eliminar Usuario</span>
+        </button>
+       </div>
+
+       <br>
+       <div align="center">
+             <div class="gridStyle" ng-grid="gridOpciones"></div>
+       </div>
+ 
+</body>
+ 
+</html>
+ 

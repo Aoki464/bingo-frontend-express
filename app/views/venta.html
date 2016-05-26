@@ -1,0 +1,38 @@
+<!--<p>This is the venta view.</p>-->
+<html ng-app="VentaApp">
+    
+<body ng-controller="VentaCtrl" >    
+
+ <div class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" ui-sref="ventas"><u>bandeja</u></a> <a class="navbar-text">Bienvenido</a>
+		</div>
+	</div>    
+
+	<div >
+		<div id = "columna1">
+			<span><br>
+			<span>&nbsp;&nbsp;id: 		</span>{{venta.id}}<br>
+			 
+			</span>
+		</div>
+
+		<div id="columna2">
+			<br>
+			<button type="button" class="btn btn-default">
+				<span class="glyphicon glyphicon-trash"> Eliminar</span>
+			</button>
+		</div>
+
+	</div>
+	<hr color ="black">
+	<div >
+		<span>&nbsp;&nbsp;Detalle de la venta</span><br><br>
+
+		<b>Identificador de la venta:</b>
+				<br>&nbsp;&nbsp;<span  class="glyphicon glyphicon-ok blue" ng-click="administrarVenta().read()"></span> {{venta.id}}
+				<br>
+	
+		</div>
+	<br>
+</body>

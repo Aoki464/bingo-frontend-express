@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html ng-app="loginApp">
+    
+<head></head>
+    
+    
+<body ng-controller="LoginCtrl" >
+    
+    <div class="container" id="log">
+      <div class="row" id="tt">
+        <h1>Bienvenido {{YourName}}</h1>
+      </div>
+      <br>
+       <div class="form">
+           <div class="row">
+                <label>Usuario</label>
+                </div>
+                <div class="row">
+                    <input type="text" ng-model="YourName" class="form-control" placeholder="usuario">
+                </div>           
+                <br>
+           
+                <div class="row">
+                    <label>Contraseña</label>
+                </div>
+                <div class="row">
+                    <input type="password" ng-model="password" placeholder="password" class="form-control" >
+                </div>
+                <br>
+
+                <div class="row" align="center">
+                    <button type="button" class="btn btn-primary" ng-click="enviar()" >
+                    <i class="glyphicon glyphicon-search">Ingresar</i></button>
+                </div>
+           
+        </div>
+      </div>
+
+</body>
+</html>

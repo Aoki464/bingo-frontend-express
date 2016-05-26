@@ -1,0 +1,27 @@
+{
+	"id": 21,
+	"fecha": "2016-05-26 17:25:55",
+	"asesor": {
+		"codigo": 1,
+		"nombre": "Bingo En Linea",
+		"adicion": ""
+	},
+	"cliente": null,
+	"carton": [{
+		"codigo": 0,
+		"nombre": "2 - 5",
+		"adicion": ""
+	}],
+
+	"sorteo": {
+		"codigo": 2,
+		"nombre": "1000",
+		"adicion": ""
+	},
+	"asignacion": {
+		"codigo": 1,
+		"nombre": "1",
+		"adicion": ""
+	},
+	"serie": -1
+}

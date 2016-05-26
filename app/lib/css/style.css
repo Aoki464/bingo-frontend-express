@@ -1,0 +1,68 @@
+.gridStyle {
+	border: 2px solid rgb(212, 212, 212);
+	width: 1000px;
+	height: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 15px;
+}
+
+.contenedorGeneral {
+	border: 1px solid rgb(212, 212, 212);
+	width: 1100px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: left;
+	background-color: #FFFFFF;
+}
+
+.contenedorBandeja {
+	border: 1px solid rgb(212, 212, 212);
+	border-radius: 20px;
+	width: 1050px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: left;
+	background-color: #F8F8F8;
+}
+
+.contenedorBotones {
+	border: 0px dotted rgb(212, 212, 212);
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: right;
+	background-color: #F8F8F8;
+}
+
+.estiloLetraDetalle {
+	font-style: italic;
+	font-weight: 900;
+}
+
+hr {
+	border: 0;
+	width: 100%;
+	color: #f00;
+	background-color: #928C8C;
+	height: 1px;
+}
+
+#columna1 {
+	float: left;
+	width: 70%;
+}
+
+#columna2 {
+	float: right;
+	width: 20%;
+}

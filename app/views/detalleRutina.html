@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html ng-app="detalleRutinaApp">
+
+<head></head>
+
+<body ng-controller="RutinaCtrl" >
+    
+    <div class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" ui-sref="usuarios"><u>bandeja</u></a> <a class="navbar-text">Bienvenido</a>
+		</div>
+	</div>    
+
+	<div class="detalleCabezera">
+		<div id = "columna1">
+			<span><br>
+			<span class="estiloLetraDetalle">&nbsp;&nbsp;Cedula: 		</span>{{rutina.id}}<br>
+			<span class="estiloLetraDetalle">&nbsp;&nbsp;Nombre: 		</span>{{obtenerMensaje.destino}}<br> 
+			<span class="estiloLetraDetalle">&nbsp;&nbsp;Apellido:		</span>{{obtenerMensaje.asunto}}<br> 
+			</span>
+		</div>
+
+		<div id="columna2">
+			<br>
+			<button type="button" class="btn btn-default">
+				<span class="glyphicon glyphicon-trash"> Eliminar</span>
+			</button>
+		</div>
+
+	</div>
+	<hr color ="black">
+	<div class="contenedor">
+		<span class="estiloLetraDetalle">&nbsp;&nbsp;Detalle de la Rutina</span><br><br>
+		Biceps: 	
+				<br>&nbsp;&nbsp;- {{rutina.biceps}}
+				<br>&nbsp;&nbsp;- 
+				<br>
+		Triceps:	
+				<br>&nbsp;&nbsp;- {{rutina.triceps}}
+				<br>&nbsp;&nbsp;- 
+				<br>
+		Espalda:
+				<br>&nbsp;&nbsp;- {{rutina.chest}}
+				<br>&nbsp;&nbsp;- 
+				<br>
+		Pecho:
+				<br>&nbsp;&nbsp;- {{rutina.chest}}
+				<br>&nbsp;&nbsp;- 
+				<br>
+        Pierna:
+				<br>&nbsp;&nbsp;- {{rutina.legs}}
+				<br>&nbsp;&nbsp;- 
+				<br>
+		</div>
+	<br>
+
+</body>
+</html>

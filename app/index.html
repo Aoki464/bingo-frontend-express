@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="inicioApp">
+
+<head>
+<title>GYM UdeA</title>
+
+<!-- Hojas de Estilo -->
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="lib/css/style.css" />
+<link rel="stylesheet" type="text/css" href="lib/css/ng-grid.css" />
+    
+<link rel="shortcut icon" href="resources/icon.png">
+
+</head>
+
+<body class="contenedorGeneral">
+
+	<div align="center">
+		<br> 
+        <img src="resources/header.png" alt="Gestor" width="1024" height="232" />
+	</div>
+	
+	<br>
+
+	<div class="contenedorBandeja" ui-view></div>
+
+	<!-- Librerias -->
+	<script type="text/javascript" src="lib/angular/angular.js"></script>
+	<script type="text/javascript" src="lib/angular-ui-router.js"></script>
+	<script type="text/javascript" src="lib/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="lib/ng-grid-2.0.11.min.js"></script>
+	
+	
+	<!-- Scripts -->
+	<script type="text/javascript" src="routesApp.js"></script>
+	<script type="text/javascript" src="scripts/listaUsuarios.js"></script>
+	<script type="text/javascript" src="scripts/detalleRutina.js"></script>
+    <script type="text/javascript" src="scripts/login.js"></script>
+    <script type="text/javascript" src="scripts/venta.js"></script>
+    
+	
+
+</body>
+
+</html>

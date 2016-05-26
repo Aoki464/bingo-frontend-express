@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html ng-app="registroController">
+
+<head></head>
+
+<body ng-controller="RegistroCtrl" >
+
+	<div class="detalleCabezera">
+		<div id = "columna1">
+			<span><br>
+			<span class="estiloLetraDetalle">&nbsp;&nbsp;Cedula: 		</span>{{obtenerMensaje.origen}}<br>
+			<span class="estiloLetraDetalle">&nbsp;&nbsp;Nombre: 		</span>{{obtenerMensaje.destino}}<br> 
+			<span class="estiloLetraDetalle">&nbsp;&nbsp;Apellido:		</span>{{obtenerMensaje.asunto}}<br> 
+			</span>
+		</div>
+
+		<div id="columna2">
+			<br>
+			<button type="button" class="btn btn-default">
+				<span class="glyphicon glyphicon-trash"> Eliminar</span>
+			</button>
+		</div>
+
+	</div>
+	<hr color ="black">
+	<div class="contenedor">
+		<span class="estiloLetraDetalle">&nbsp;&nbsp;Detalle de la Rutina</span><br><br>
+		Biceps:<br> 	
+				-<br>
+				-<br>
+				-<br>
+		Triceps:<br>	
+				-<br>
+				-<br>
+				-<br>
+		Pierna:<br>
+				-<br>
+				-<br>
+				-<br>
+		Pecho:<br>
+				-<br>
+				-<br>
+				-<br>
+		</div>
+	<br>
+
+</body>
+</html>
