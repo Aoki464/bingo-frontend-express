@@ -1,0 +1,107 @@
+/**
+Solicita horas
+GET
+http://localhost:8084/war/jaxrs/configuracion/horas?token=6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
+token:6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
+
+**/
+{
+	"data" : [{
+			"codigo" : 0,
+			"nombre" : "00",
+			"adicion" : ""
+		}, {
+			"codigo" : 1,
+			"nombre" : "01",
+			"adicion" : ""
+		}, {
+			"codigo" : 2,
+			"nombre" : "02",
+			"adicion" : ""
+		}, {
+			"codigo" : 3,
+			"nombre" : "03",
+			"adicion" : ""
+		}, {
+			"codigo" : 4,
+			"nombre" : "04",
+			"adicion" : ""
+		}, {
+			"codigo" : 5,
+			"nombre" : "05",
+			"adicion" : ""
+		}, {
+			"codigo" : 6,
+			"nombre" : "06",
+			"adicion" : ""
+		}, {
+			"codigo" : 7,
+			"nombre" : "07",
+			"adicion" : ""
+		}, {
+			"codigo" : 8,
+			"nombre" : "08",
+			"adicion" : ""
+		}, {
+			"codigo" : 9,
+			"nombre" : "09",
+			"adicion" : ""
+		}, {
+			"codigo" : 10,
+			"nombre" : "10",
+			"adicion" : ""
+		}, {
+			"codigo" : 11,
+			"nombre" : "11",
+			"adicion" : ""
+		}, {
+			"codigo" : 12,
+			"nombre" : "12",
+			"adicion" : ""
+		}, {
+			"codigo" : 13,
+			"nombre" : "13",
+			"adicion" : ""
+		}, {
+			"codigo" : 14,
+			"nombre" : "14",
+			"adicion" : ""
+		}, {
+			"codigo" : 15,
+			"nombre" : "15",
+			"adicion" : ""
+		}, {
+			"codigo" : 16,
+			"nombre" : "16",
+			"adicion" : ""
+		}, {
+			"codigo" : 17,
+			"nombre" : "17",
+			"adicion" : ""
+		}, {
+			"codigo" : 18,
+			"nombre" : "18",
+			"adicion" : ""
+		}, {
+			"codigo" : 19,
+			"nombre" : "19",
+			"adicion" : ""
+		}, {
+			"codigo" : 20,
+			"nombre" : "20",
+			"adicion" : ""
+		}, {
+			"codigo" : 21,
+			"nombre" : "21",
+			"adicion" : ""
+		}, {
+			"codigo" : 22,
+			"nombre" : "22",
+			"adicion" : ""
+		}, {
+			"codigo" : 23,
+			"nombre" : "23",
+			"adicion" : ""
+		}
+	]
+}

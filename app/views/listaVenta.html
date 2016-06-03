@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html ng-app="listaUsuariosApp">
+ 
+<head></head>
+ 
+<body ng-controller="VentaCtrl">
+    
+        <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="usuarios"><u>bandeja</u></a> 
+                <a class="navbar-text">Bienvenido</a>
+            </div>
+        </div>
+    <div align = "center"><h2>Lista de usuarios</h2></div>
+       <div class="contenedorBotones">		
+        <button type="button" class="btn btn-default" name="Eliminar" ng-click="">
+            <i class="glyphicon glyphicon-plus .blue">Agregar</i></button>
+        <button type="button" class="btn btn-default" name="Eliminar" ng-click="">    
+            <i class="glyphicon glyphicon-search" ng-click="administrarVenta().readList()">Buscar</i></button>        
+       </div>
+
+       <br>
+       <div align="center">
+            <!--     Con esto se realiza el filtrado o busqueda de usuario    -->
+           <strong>Buscar Usuario:</strong><input type="text" ng-model="filterOptions.filterText" />
+             <div class="gridStyle" ng-grid="gridOptions"></div>
+       </div>
+ 
+</body>
+ 
+</html>

@@ -1,0 +1,10 @@
+/**
+Post
+
+Reques payload: {"usuario":"sucursal", "clave":"123456"}
+
+*/
+{
+	"data" : "6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu",
+	"moreInfo" : null
+}

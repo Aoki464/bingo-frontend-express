@@ -1,0 +1,67 @@
+/**
+Solicita las figuras
+
+GET
+http://localhost:8084/war/jaxrs/configuracion/indice?token=6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu&indice=GF_&fin=0
+token:6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
+indice:GF_
+fin:0
+
+**/
+
+[{
+		"id" : 8,
+		"propiedad" : "GF_Cabezas y Colas",
+		"valor" : "75,77,78,79",
+		"rangoIni" : 4,
+		"rangoFin" : 4
+	}, {
+		"id" : 2,
+		"propiedad" : "GF_Cuadros",
+		"valor" : "11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26",
+		"rangoIni" : 3,
+		"rangoFin" : 4
+	}, {
+		"id" : 7,
+		"propiedad" : "GF_Lineas",
+		"valor" : "1,2,3,4,5,6,7,8,9,10",
+		"rangoIni" : 4,
+		"rangoFin" : 5
+	}, {
+		"id" : 6,
+		"propiedad" : "GF_Numeros 1 al 9",
+		"valor" : "61,62,63,64,65,66,67,68,69",
+		"rangoIni" : 6,
+		"rangoFin" : 18
+	}, {
+		"id" : 3,
+		"propiedad" : "GF_Piramides",
+		"valor" : "45,46,47,48,49,50,51,52",
+		"rangoIni" : 3,
+		"rangoFin" : 5
+	}, {
+		"id" : 4,
+		"propiedad" : "GF_Sencillo",
+		"valor" : "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32",
+		"rangoIni" : 4,
+		"rangoFin" : 8
+	}, {
+		"id" : 10,
+		"propiedad" : "GF_sencillo 2",
+		"valor" : "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,32,45,46,47,48,75,77,78,79,80,81,82,83,86,87,88,89,90,91",
+		"rangoIni" : 3,
+		"rangoFin" : 5
+	}, {
+		"id" : 9,
+		"propiedad" : "GF_Triangulos Medio Carton",
+		"valor" : "53,54,55,56",
+		"rangoIni" : 14,
+		"rangoFin" : 14
+	}, {
+		"id" : 5,
+		"propiedad" : "GF_Vocales",
+		"valor" : "34,35,36,37,38",
+		"rangoIni" : 12,
+		"rangoFin" : 16
+	}
+]

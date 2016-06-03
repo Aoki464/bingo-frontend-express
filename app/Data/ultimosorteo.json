@@ -1,0 +1,28 @@
+/**
+Ultimo sorteo
+GET
+Request URL:http://localhost:8084/war/jaxrs/sorteo/ultimo?token=6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
+
+token:6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
+
+
+
+*/
+
+{
+	"id" : null,
+	"inscrito" : null,
+	"tipoSorteo" : null,
+	"estadoSorteo" : null,
+	"tipoPremio" : null,
+	"fecha" : null,
+	"publicidad" : false,
+	"cantidadBalotasPub" : null,
+	"valorCarton" : 0,
+	"ejecucionLocal" : false,
+	"automatico" : false,
+	"velocidadBalotas" : null,
+	"premios" : null,
+	"videos" : null,
+	"conAudio" : false
+}

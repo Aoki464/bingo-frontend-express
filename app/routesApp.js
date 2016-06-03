@@ -12,7 +12,7 @@ inicioApp.config(['$stateProvider', '$urlRouterProvider',
                   function($stateProvider, $urlRouterProvider){
       
       // For any unmatched url, send to /login
-      $urlRouterProvider.otherwise("venta")
+      $urlRouterProvider.otherwise("/venta")
       
       $stateProvider
         .state('login', {
@@ -21,10 +21,16 @@ inicioApp.config(['$stateProvider', '$urlRouterProvider',
             controller: 'LoginCtrl'       
 
         })
-      $stateProvider
+//      $stateProvider
         .state('venta', {
             url: '/venta',
             templateUrl: 'views/venta.html',
+            controller: 'VentaCtrl'       
+
+        })
+        .state('listaVenta', {
+            url: '/listaVenta',
+            templateUrl: 'views/listaVenta.html',
             controller: 'VentaCtrl'       
 
         })

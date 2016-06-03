@@ -1,0 +1,252 @@
+/**
+SOlicita los minutos
+GET
+
+Request URL:http://localhost:8084/war/jaxrs/configuracion/minutos?token=6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
+
+
+ **  /
+ {
+	"data" : [{
+			"codigo" : 0,
+			"nombre" : "00",
+			"adicion" : ""
+		}, {
+			"codigo" : 1,
+			"nombre" : "01",
+			"adicion" : ""
+		}, {
+			"codigo" : 2,
+			"nombre" : "02",
+			"adicion" : ""
+		}, {
+			"codigo" : 3,
+			"nombre" : "03",
+			"adicion" : ""
+		}, {
+			"codigo" : 4,
+			"nombre" : "04",
+			"adicion" : ""
+		}, {
+			"codigo" : 5,
+			"nombre" : "05",
+			"adicion" : ""
+		}, {
+			"codigo" : 6,
+			"nombre" : "06",
+			"adicion" : ""
+		}, {
+			"codigo" : 7,
+			"nombre" : "07",
+			"adicion" : ""
+		}, {
+			"codigo" : 8,
+			"nombre" : "08",
+			"adicion" : ""
+		}, {
+			"codigo" : 9,
+			"nombre" : "09",
+			"adicion" : ""
+		}, {
+			"codigo" : 10,
+			"nombre" : "10",
+			"adicion" : ""
+		}, {
+			"codigo" : 11,
+			"nombre" : "11",
+			"adicion" : ""
+		}, {
+			"codigo" : 12,
+			"nombre" : "12",
+			"adicion" : ""
+		}, {
+			"codigo" : 13,
+			"nombre" : "13",
+			"adicion" : ""
+		}, {
+			"codigo" : 14,
+			"nombre" : "14",
+			"adicion" : ""
+		}, {
+			"codigo" : 15,
+			"nombre" : "15",
+			"adicion" : ""
+		}, {
+			"codigo" : 16,
+			"nombre" : "16",
+			"adicion" : ""
+		}, {
+			"codigo" : 17,
+			"nombre" : "17",
+			"adicion" : ""
+		}, {
+			"codigo" : 18,
+			"nombre" : "18",
+			"adicion" : ""
+		}, {
+			"codigo" : 19,
+			"nombre" : "19",
+			"adicion" : ""
+		}, {
+			"codigo" : 20,
+			"nombre" : "20",
+			"adicion" : ""
+		}, {
+			"codigo" : 21,
+			"nombre" : "21",
+			"adicion" : ""
+		}, {
+			"codigo" : 22,
+			"nombre" : "22",
+			"adicion" : ""
+		}, {
+			"codigo" : 23,
+			"nombre" : "23",
+			"adicion" : ""
+		}, {
+			"codigo" : 24,
+			"nombre" : "24",
+			"adicion" : ""
+		}, {
+			"codigo" : 25,
+			"nombre" : "25",
+			"adicion" : ""
+		}, {
+			"codigo" : 26,
+			"nombre" : "26",
+			"adicion" : ""
+		}, {
+			"codigo" : 27,
+			"nombre" : "27",
+			"adicion" : ""
+		}, {
+			"codigo" : 28,
+			"nombre" : "28",
+			"adicion" : ""
+		}, {
+			"codigo" : 29,
+			"nombre" : "29",
+			"adicion" : ""
+		}, {
+			"codigo" : 30,
+			"nombre" : "30",
+			"adicion" : ""
+		}, {
+			"codigo" : 31,
+			"nombre" : "31",
+			"adicion" : ""
+		}, {
+			"codigo" : 32,
+			"nombre" : "32",
+			"adicion" : ""
+		}, {
+			"codigo" : 33,
+			"nombre" : "33",
+			"adicion" : ""
+		}, {
+			"codigo" : 34,
+			"nombre" : "34",
+			"adicion" : ""
+		}, {
+			"codigo" : 35,
+			"nombre" : "35",
+			"adicion" : ""
+		}, {
+			"codigo" : 36,
+			"nombre" : "36",
+			"adicion" : ""
+		}, {
+			"codigo" : 37,
+			"nombre" : "37",
+			"adicion" : ""
+		}, {
+			"codigo" : 38,
+			"nombre" : "38",
+			"adicion" : ""
+		}, {
+			"codigo" : 39,
+			"nombre" : "39",
+			"adicion" : ""
+		}, {
+			"codigo" : 40,
+			"nombre" : "40",
+			"adicion" : ""
+		}, {
+			"codigo" : 41,
+			"nombre" : "41",
+			"adicion" : ""
+		}, {
+			"codigo" : 42,
+			"nombre" : "42",
+			"adicion" : ""
+		}, {
+			"codigo" : 43,
+			"nombre" : "43",
+			"adicion" : ""
+		}, {
+			"codigo" : 44,
+			"nombre" : "44",
+			"adicion" : ""
+		}, {
+			"codigo" : 45,
+			"nombre" : "45",
+			"adicion" : ""
+		}, {
+			"codigo" : 46,
+			"nombre" : "46",
+			"adicion" : ""
+		}, {
+			"codigo" : 47,
+			"nombre" : "47",
+			"adicion" : ""
+		}, {
+			"codigo" : 48,
+			"nombre" : "48",
+			"adicion" : ""
+		}, {
+			"codigo" : 49,
+			"nombre" : "49",
+			"adicion" : ""
+		}, {
+			"codigo" : 50,
+			"nombre" : "50",
+			"adicion" : ""
+		}, {
+			"codigo" : 51,
+			"nombre" : "51",
+			"adicion" : ""
+		}, {
+			"codigo" : 52,
+			"nombre" : "52",
+			"adicion" : ""
+		}, {
+			"codigo" : 53,
+			"nombre" : "53",
+			"adicion" : ""
+		}, {
+			"codigo" : 54,
+			"nombre" : "54",
+			"adicion" : ""
+		}, {
+			"codigo" : 55,
+			"nombre" : "55",
+			"adicion" : ""
+		}, {
+			"codigo" : 56,
+			"nombre" : "56",
+			"adicion" : ""
+		}, {
+			"codigo" : 57,
+			"nombre" : "57",
+			"adicion" : ""
+		}, {
+			"codigo" : 58,
+			"nombre" : "58",
+			"adicion" : ""
+		}, {
+			"codigo" : 59,
+			"nombre" : "59",
+			"adicion" : ""
+		}
+	]
+}

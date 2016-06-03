@@ -1,0 +1,391 @@
+/**
+Solicitud de configuracion de las figuras
+GET
+Request URL:http://localhost:8084/war/jaxrs/figura/configuracion?token=6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu&casillas=0
+
+token:6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
+casillas:0
+
+
+
+**/
+{
+	"data" : [{
+			"codigo" : 32,
+			"nombre" : "4 Esquinas",
+			"adicion" : "4"
+		}, {
+			"codigo" : 60,
+			"nombre" : "Ajedrez",
+			"adicion" : "12"
+		}, {
+			"codigo" : 59,
+			"nombre" : "Asterisco",
+			"adicion" : "16"
+		}, {
+			"codigo" : 75,
+			"nombre" : "Cabeza y Cola 1",
+			"adicion" : "4"
+		}, {
+			"codigo" : 77,
+			"nombre" : "Cabeza y Cola 2",
+			"adicion" : "4"
+		}, {
+			"codigo" : 78,
+			"nombre" : "Cabeza y Cola 3",
+			"adicion" : "4"
+		}, {
+			"codigo" : 79,
+			"nombre" : "Cabeza y Cola 4",
+			"adicion" : "4"
+		}, {
+			"codigo" : 6,
+			"nombre" : "Columna_B",
+			"adicion" : "5"
+		}, {
+			"codigo" : 9,
+			"nombre" : "Columna_G",
+			"adicion" : "5"
+		}, {
+			"codigo" : 7,
+			"nombre" : "Columna_I",
+			"adicion" : "5"
+		}, {
+			"codigo" : 8,
+			"nombre" : "Columna_N",
+			"adicion" : "4"
+		}, {
+			"codigo" : 10,
+			"nombre" : "Columna_O",
+			"adicion" : "5"
+		}, {
+			"codigo" : 80,
+			"nombre" : "cruz 1",
+			"adicion" : "4"
+		}, {
+			"codigo" : 81,
+			"nombre" : "cruz 2",
+			"adicion" : "4"
+		}, {
+			"codigo" : 82,
+			"nombre" : "cruz 3",
+			"adicion" : "4"
+		}, {
+			"codigo" : 83,
+			"nombre" : "cruz 4",
+			"adicion" : "4"
+		}, {
+			"codigo" : 27,
+			"nombre" : "Cruz Grande",
+			"adicion" : "4"
+		}, {
+			"codigo" : 28,
+			"nombre" : "Cruz Pequeña",
+			"adicion" : "4"
+		}, {
+			"codigo" : 91,
+			"nombre" : "cuadro ancho",
+			"adicion" : "4"
+		}, {
+			"codigo" : 90,
+			"nombre" : "cuadro largo",
+			"adicion" : "4"
+		}, {
+			"codigo" : 11,
+			"nombre" : "Cuadro_01",
+			"adicion" : "4"
+		}, {
+			"codigo" : 12,
+			"nombre" : "Cuadro_02",
+			"adicion" : "4"
+		}, {
+			"codigo" : 13,
+			"nombre" : "Cuadro_03",
+			"adicion" : "4"
+		}, {
+			"codigo" : 14,
+			"nombre" : "Cuadro_04",
+			"adicion" : "4"
+		}, {
+			"codigo" : 15,
+			"nombre" : "Cuadro_05",
+			"adicion" : "4"
+		}, {
+			"codigo" : 16,
+			"nombre" : "Cuadro_06",
+			"adicion" : "3"
+		}, {
+			"codigo" : 17,
+			"nombre" : "Cuadro_07",
+			"adicion" : "3"
+		}, {
+			"codigo" : 18,
+			"nombre" : "Cuadro_08",
+			"adicion" : "4"
+		}, {
+			"codigo" : 19,
+			"nombre" : "Cuadro_09",
+			"adicion" : "4"
+		}, {
+			"codigo" : 20,
+			"nombre" : "Cuadro_10",
+			"adicion" : "3"
+		}, {
+			"codigo" : 21,
+			"nombre" : "Cuadro_11",
+			"adicion" : "3"
+		}, {
+			"codigo" : 22,
+			"nombre" : "Cuadro_12",
+			"adicion" : "4"
+		}, {
+			"codigo" : 23,
+			"nombre" : "Cuadro_13",
+			"adicion" : "4"
+		}, {
+			"codigo" : 24,
+			"nombre" : "Cuadro_14",
+			"adicion" : "4"
+		}, {
+			"codigo" : 25,
+			"nombre" : "Cuadro_15",
+			"adicion" : "4"
+		}, {
+			"codigo" : 26,
+			"nombre" : "Cuadro_16",
+			"adicion" : "4"
+		}, {
+			"codigo" : 29,
+			"nombre" : "Diagonal",
+			"adicion" : "4"
+		}, {
+			"codigo" : 30,
+			"nombre" : "Diagonal Inversa",
+			"adicion" : "4"
+		}, {
+			"codigo" : 31,
+			"nombre" : "Diamante",
+			"adicion" : "8"
+		}, {
+			"codigo" : 61,
+			"nombre" : "El 1",
+			"adicion" : "7"
+		}, {
+			"codigo" : 70,
+			"nombre" : "El 10",
+			"adicion" : "16"
+		}, {
+			"codigo" : 71,
+			"nombre" : "El 15",
+			"adicion" : "15"
+		}, {
+			"codigo" : 62,
+			"nombre" : "El 2",
+			"adicion" : "10"
+		}, {
+			"codigo" : 63,
+			"nombre" : "El 3",
+			"adicion" : "13"
+		}, {
+			"codigo" : 72,
+			"nombre" : "El 31",
+			"adicion" : "15"
+		}, {
+			"codigo" : 64,
+			"nombre" : "El 4",
+			"adicion" : "9"
+		}, {
+			"codigo" : 65,
+			"nombre" : "El 5",
+			"adicion" : "13"
+		}, {
+			"codigo" : 66,
+			"nombre" : "El 6",
+			"adicion" : "14"
+		}, {
+			"codigo" : 67,
+			"nombre" : "El 7",
+			"adicion" : "8"
+		}, {
+			"codigo" : 68,
+			"nombre" : "El 8",
+			"adicion" : "18"
+		}, {
+			"codigo" : 69,
+			"nombre" : "El 9",
+			"adicion" : "11"
+		}, {
+			"codigo" : 44,
+			"nombre" : "Flecha Abajo",
+			"adicion" : "10"
+		}, {
+			"codigo" : 43,
+			"nombre" : "Flecha Arriba",
+			"adicion" : "10"
+		}, {
+			"codigo" : 86,
+			"nombre" : "inversa 1",
+			"adicion" : "4"
+		}, {
+			"codigo" : 74,
+			"nombre" : "L Inversa",
+			"adicion" : "9"
+		}, {
+			"codigo" : 76,
+			"nombre" : "La copa",
+			"adicion" : "8"
+		}, {
+			"codigo" : 87,
+			"nombre" : "la inversa 2",
+			"adicion" : "4"
+		}, {
+			"codigo" : 88,
+			"nombre" : "la inversa 3",
+			"adicion" : "4"
+		}, {
+			"codigo" : 89,
+			"nombre" : "la inversa 4",
+			"adicion" : "4"
+		}, {
+			"codigo" : 85,
+			"nombre" : "letra mini Q",
+			"adicion" : "9"
+		}, {
+			"codigo" : 84,
+			"nombre" : "letra T",
+			"adicion" : "8"
+		}, {
+			"codigo" : 93,
+			"nombre" : "letra Y",
+			"adicion" : "6"
+		}, {
+			"codigo" : 34,
+			"nombre" : "Letra_A",
+			"adicion" : "13"
+		}, {
+			"codigo" : 35,
+			"nombre" : "Letra_E",
+			"adicion" : "16"
+		}, {
+			"codigo" : 36,
+			"nombre" : "Letra_I",
+			"adicion" : "12"
+		}, {
+			"codigo" : 73,
+			"nombre" : "Letra_L",
+			"adicion" : "9"
+		}, {
+			"codigo" : 42,
+			"nombre" : "Letra_M",
+			"adicion" : "12"
+		}, {
+			"codigo" : 39,
+			"nombre" : "Letra_N",
+			"adicion" : "12"
+		}, {
+			"codigo" : 37,
+			"nombre" : "Letra_O",
+			"adicion" : "16"
+		}, {
+			"codigo" : 38,
+			"nombre" : "Letra_U",
+			"adicion" : "13"
+		}, {
+			"codigo" : 40,
+			"nombre" : "Letra_X",
+			"adicion" : "8"
+		}, {
+			"codigo" : 41,
+			"nombre" : "Letra_Z",
+			"adicion" : "12"
+		}, {
+			"codigo" : 1,
+			"nombre" : "Linea Horizontal_1",
+			"adicion" : "5"
+		}, {
+			"codigo" : 2,
+			"nombre" : "Linea Horizontal_2",
+			"adicion" : "5"
+		}, {
+			"codigo" : 3,
+			"nombre" : "Linea Horizontal_3",
+			"adicion" : "4"
+		}, {
+			"codigo" : 4,
+			"nombre" : "Linea Horizontal_4",
+			"adicion" : "5"
+		}, {
+			"codigo" : 5,
+			"nombre" : "Linea Horizontal_5",
+			"adicion" : "5"
+		}, {
+			"codigo" : 94,
+			"nombre" : "los dos cuadros",
+			"adicion" : "8"
+		}, {
+			"codigo" : 92,
+			"nombre" : "medio lleno",
+			"adicion" : "14"
+		}, {
+			"codigo" : 45,
+			"nombre" : "Piramide_01",
+			"adicion" : "3"
+		}, {
+			"codigo" : 46,
+			"nombre" : "Piramide_02",
+			"adicion" : "3"
+		}, {
+			"codigo" : 47,
+			"nombre" : "Piramide_03",
+			"adicion" : "3"
+		}, {
+			"codigo" : 48,
+			"nombre" : "Piramide_04",
+			"adicion" : "3"
+		}, {
+			"codigo" : 49,
+			"nombre" : "Piramide_05",
+			"adicion" : "5"
+		}, {
+			"codigo" : 50,
+			"nombre" : "Piramide_06",
+			"adicion" : "5"
+		}, {
+			"codigo" : 51,
+			"nombre" : "Piramide_07",
+			"adicion" : "5"
+		}, {
+			"codigo" : 52,
+			"nombre" : "Piramide_08",
+			"adicion" : "5"
+		}, {
+			"codigo" : 33,
+			"nombre" : "Pleno",
+			"adicion" : "24"
+		}, {
+			"codigo" : 53,
+			"nombre" : "Triangulo_01",
+			"adicion" : "14"
+		}, {
+			"codigo" : 54,
+			"nombre" : "Triangulo_02",
+			"adicion" : "14"
+		}, {
+			"codigo" : 55,
+			"nombre" : "Triangulo_03",
+			"adicion" : "14"
+		}, {
+			"codigo" : 56,
+			"nombre" : "Triangulo_04",
+			"adicion" : "14"
+		}, {
+			"codigo" : 57,
+			"nombre" : "Triangulo_05",
+			"adicion" : "8"
+		}, {
+			"codigo" : 58,
+			"nombre" : "Triangulo_06",
+			"adicion" : "8"
+		}
+	]
+}

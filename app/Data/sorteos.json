@@ -1,0 +1,20 @@
+/**
+
+GET
+
+http://localhost:8084/war/jaxrs/sorteo?caso=1&pagina=-1&token=6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu&keyword=&keyword2=
+caso:1
+pagina:-1
+token:6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
+keyword:
+keyword2:
+
+*/
+{
+	"totalCount" : 0,
+	"firstResult" : 0,
+	"maxResult" : 150,
+	"results" : []
+}
+
+

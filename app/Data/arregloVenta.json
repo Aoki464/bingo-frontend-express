@@ -1,0 +1,531 @@
+{
+	"totalCount": 21,
+	"firstResult": 0,
+	"maxResult": 150,
+	"results": [{
+		"id": 21,
+		"fecha": "2016-05-26 17:25:55",
+		"asesor": {
+			"codigo": 1,
+			"nombre": "Bingo En Linea",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "2 - 5",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 2,
+			"nombre": "1000",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 1,
+			"nombre": "1",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 20,
+		"fecha": "2016-05-11 09:46:41",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "4025 - 4025",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 19,
+		"fecha": "2016-05-11 09:44:35",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "4024 - 4024",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 18,
+		"fecha": "2016-05-10 21:53:45",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "4012 - 4012",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 17,
+		"fecha": "2016-05-10 21:53:33",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5042 - 5042",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 16,
+		"fecha": "2016-05-10 21:53:33",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5041 - 5041",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 15,
+		"fecha": "2016-05-10 21:53:22",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5040 - 5040",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 14,
+		"fecha": "2016-05-10 21:53:22",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5039 - 5039",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 13,
+		"fecha": "2016-05-10 21:24:38",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5015 - 5015",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 12,
+		"fecha": "2016-05-10 21:24:38",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5014 - 5014",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 11,
+		"fecha": "2016-05-10 21:23:11",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5013 - 5013",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 10,
+		"fecha": "2016-05-10 21:23:11",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5012 - 5012",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 9,
+		"fecha": "2016-05-10 21:14:55",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5011 - 5011",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 8,
+		"fecha": "2016-05-10 21:14:53",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "5010 - 5010",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 7,
+		"fecha": "2016-05-10 21:10:51",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "2009 - 2009",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 6,
+		"fecha": "2016-05-10 21:08:45",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "2008 - 2008",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 5,
+		"fecha": "2016-05-10 21:04:17",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "2005 - 2005",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 4,
+		"fecha": "2016-05-10 21:00:26",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "2004 - 2004",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 2,
+			"nombre": "2",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 3,
+		"fecha": "2016-05-10 20:42:32",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "1002 - 1002",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 1,
+			"nombre": "1",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 2,
+		"fecha": "2016-05-10 20:41:57",
+		"asesor": {
+			"codigo": 1,
+			"nombre": "Bingo En Linea",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "1 - 1",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 1,
+			"nombre": "1",
+			"adicion": ""
+		},
+		"serie": -1
+	}, {
+		"id": 1,
+		"fecha": "2016-05-10 20:31:02",
+		"asesor": {
+			"codigo": 2,
+			"nombre": "Sucursal Bingo",
+			"adicion": ""
+		},
+		"cliente": null,
+		"carton": [{
+			"codigo": 0,
+			"nombre": "1001 - 1001",
+			"adicion": ""
+		}],
+		"sorteo": {
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		},
+		"asignacion": {
+			"codigo": 1,
+			"nombre": "1",
+			"adicion": ""
+		},
+		"serie": -1
+	}]
+}
