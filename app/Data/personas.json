@@ -1,0 +1,33 @@
+﻿{
+	"totalCount": 3,
+	"firstResult": 0,
+	"maxResult": 150,
+	"results": [{
+		"id": 1,
+		"tipoDocumento": "CEDULA",
+		"identificacion": "123456",
+		"nombres": "Bingo",
+		"apellidos": "En Linea",
+		"telefono": "",
+		"celular": "",
+		"email": ""
+	}, {
+		"id": 3,
+		"tipoDocumento": "CEDULA",
+		"identificacion": "222222222",
+		"nombres": "Patinador",
+		"apellidos": "Patinador",
+		"telefono": "",
+		"celular": "",
+		"email": ""
+	}, {
+		"id": 2,
+		"tipoDocumento": "CEDULA",
+		"identificacion": "111111111",
+		"nombres": "Sucursal",
+		"apellidos": "Bingo",
+		"telefono": "",
+		"celular": "",
+		"email": ""
+	}]
+}

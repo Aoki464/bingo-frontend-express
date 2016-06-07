@@ -9,7 +9,7 @@
  */
 
 
- angular.module('VentaApp', ['ngGrid']).controller('VentaCtrl', function ($scope, $http, $location) {
+ angular.module('AsignacionApp', ['ngGrid']).controller('AsignacionCtrl', function ($scope, $http, $location) {
     $scope.venta = null;
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -81,7 +81,8 @@
         // responde false si no esta definido
         if(!data.results){
             seldata = data;
-        }
+        }       
+       
       var pagedData = seldata.slice((page - 1) * pageSize, page * pageSize);
       $scope.myData = pagedData;
         
@@ -102,9 +103,10 @@
           
         if (searchText) {
           var ft = searchText.toLowerCase();
-          $http.get('Data/arregloVenta.json').success(function (largeLoad) {
+          $http.get('Data/asignacion.json').success(function (largeLoad) {
               console.log("asdwww",largeLoad.results);
             
+              
             data = largeLoad.results.filter(function(item) {
              //  console.log("imprimiendo",item) 
                var rest = (JSON.stringify(item).toLowerCase().indexOf(ft) != -1);
@@ -116,8 +118,10 @@
             $scope.setPagingData(data,page,pageSize);
           });
         } else {
-          $http.get('Data/arregloVenta.json').success(function (largeLoad) {
+          $http.get('Data/asignacion.json').success(function (largeLoad) {
             $scope.setPagingData(largeLoad,page,pageSize);
+              
+             
           });
         }
       }, 100);
@@ -164,12 +168,13 @@
         data:  'myData',
          //El campo Field debe coincidir con su ubicacion dentro de la respuesta Json
            columnDefs: [
-       //  {field: 'id', displayName: 'ID'},
-         {field: 'fecha', displayName: 'Fecha'},
-         {field: 'sorteo.codigo', displayName: 'Sorteo'},
-         {field: 'asesor.nombre', displayName: 'Asesor'},
-         {field: 'carton[0].nombre', displayName: 'Tablas'},    
-         {field: 'serie', displayName: 'Serie'}    
+         {field: 'admin.nombre', displayName: 'Administrador'},
+         {field: 'fechaHora', displayName: 'Fecha'},
+         {field: 'activo', displayName: 'Estado'},
+         {field: 'desde', displayName: 'Tabla desde'},
+         {field: 'hasta', displayName: 'Tabla hasta'},
+         {field: 'serie', displayName: 'Serie'}
+             
                 
          
        ],       

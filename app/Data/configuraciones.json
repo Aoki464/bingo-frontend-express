@@ -1,0 +1,66 @@
+﻿{
+	"totalCount": 10,
+	"firstResult": 0,
+	"maxResult": 50,
+	"results": [{
+		"id": 1,
+		"propiedad": "PP_promo01",
+		"valor": "2.5",
+		"rangoIni": 0,
+		"rangoFin": 0
+	}, {
+		"id": 2,
+		"propiedad": "GF_Cuadros",
+		"valor": "Cuadro_01, Cuadro_02, Cuadro_03, Cuadro_04, Cuadro_05, Cuadro_06, Cuadro_07, Cuadro_08, Cuadro_09, Cuadro_10, Cuadro_11, Cuadro_12, Cuadro_13, Cuadro_14, Cuadro_15, Cuadro_16",
+		"rangoIni": 3,
+		"rangoFin": 4
+	}, {
+		"id": 3,
+		"propiedad": "GF_Piramides",
+		"valor": "Piramide_01, Piramide_02, Piramide_03, Piramide_04, Piramide_05, Piramide_06, Piramide_07, Piramide_08",
+		"rangoIni": 3,
+		"rangoFin": 5
+	}, {
+		"id": 4,
+		"propiedad": "GF_Sencillo",
+		"valor": "Linea Horizontal_1, Linea Horizontal_2, Linea Horizontal_3, Linea Horizontal_4, Linea Horizontal_5, Columna_B, Columna_I, Columna_N, Columna_G, Columna_O, Cuadro_01, Cuadro_02, Cuadro_03, Cuadro_04, Cuadro_05, Cuadro_06, Cuadro_07, Cuadro_08, Cuadro_09, Cuadro_10, Cuadro_11, Cuadro_12, Cuadro_13, Cuadro_14, Cuadro_15, Cuadro_16, Cruz Grande, Cruz Pequeña, Diagonal, Diagonal Inversa, Diamante, 4 Esquinas",
+		"rangoIni": 4,
+		"rangoFin": 8
+	}, {
+		"id": 5,
+		"propiedad": "GF_Vocales",
+		"valor": "Letra_A, Letra_E, Letra_I, Letra_O, Letra_U",
+		"rangoIni": 12,
+		"rangoFin": 16
+	}, {
+		"id": 6,
+		"propiedad": "GF_Numeros 1 al 9",
+		"valor": "El 1, El 2, El 3, El 4, El 5, El 6, El 7, El 8, El 9",
+		"rangoIni": 6,
+		"rangoFin": 18
+	}, {
+		"id": 7,
+		"propiedad": "GF_Lineas",
+		"valor": "Linea Horizontal_1, Linea Horizontal_2, Linea Horizontal_3, Linea Horizontal_4, Linea Horizontal_5, Columna_B, Columna_I, Columna_N, Columna_G, Columna_O",
+		"rangoIni": 4,
+		"rangoFin": 5
+	}, {
+		"id": 8,
+		"propiedad": "GF_Cabezas y Colas",
+		"valor": "Cabeza y Cola 1, Cabeza y Cola 2, Cabeza y Cola 3, Cabeza y Cola 4",
+		"rangoIni": 4,
+		"rangoFin": 4
+	}, {
+		"id": 9,
+		"propiedad": "GF_Triangulos Medio Carton",
+		"valor": "Triangulo_01, Triangulo_02, Triangulo_03, Triangulo_04",
+		"rangoIni": 14,
+		"rangoFin": 14
+	}, {
+		"id": 10,
+		"propiedad": "GF_sencillo 2",
+		"valor": "Linea Horizontal_1, Linea Horizontal_2, Linea Horizontal_3, Linea Horizontal_4, Linea Horizontal_5, Columna_B, Columna_I, Columna_N, Columna_G, Columna_O, Cuadro_01, Cuadro_02, Cuadro_03, Cuadro_04, Cuadro_05, Cuadro_06, Cuadro_07, Cuadro_08, Cuadro_09, Cuadro_10, Cuadro_11, Cuadro_12, Cuadro_13, Cuadro_14, Cuadro_15, Cuadro_16, Cruz Grande, Cruz Pequeña, Diagonal, Diagonal Inversa, 4 Esquinas, Piramide_01, Piramide_02, Piramide_03, Piramide_04, Cabeza y Cola 1, Cabeza y Cola 2, Cabeza y Cola 3, Cabeza y Cola 4, cruz 1, cruz 2, cruz 3, cruz 4, inversa 1, la inversa 2, la inversa 3, la inversa 4, cuadro largo, cuadro ancho",
+		"rangoIni": 3,
+		"rangoFin": 5
+	}]
+}

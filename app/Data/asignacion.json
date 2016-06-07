@@ -1,0 +1,30 @@
+﻿{
+	"totalCount": 2,
+	"firstResult": 0,
+	"maxResult": 150,
+	"results": [{
+		"id": 2,
+		"fechaHora": "2014-01-16 00:00:00",
+		"admin": {
+			"codigo": 2,
+			"nombre": "sucursal",
+			"adicion": ""
+		},
+		"desde": 1,
+		"hasta": 10000,
+		"activo": true,
+		"serie": -1
+	}, {
+		"id": 1,
+		"fechaHora": "2014-01-16 00:00:00",
+		"admin": {
+			"codigo": 2,
+			"nombre": "sucursal",
+			"adicion": ""
+		},
+		"desde": 1,
+		"hasta": 2000,
+		"activo": true,
+		"serie": -1
+	}]
+}

@@ -9,8 +9,8 @@
  */
 
 
- angular.module('VentaApp', ['ngGrid']).controller('VentaCtrl', function ($scope, $http, $location) {
-    $scope.venta = null;
+ angular.module('FiguraApp', ['ngGrid']).controller('FiguraCtrl', function ($scope, $http, $location) {
+    $scope.figura = null;
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -74,12 +74,12 @@
         console.log("aaaaaa", data)
         
         //var seldata = (data.results)?data.results:data;
-        var seldata = data.results
+        var seldata = data.data;
         //Con el if puedo verificar si algo es nulo, y preguntar por la propiedad del objeto o en este
         //caso la columna del json, en caso de que este definido
         
         // responde false si no esta definido
-        if(!data.results){
+        if(!data.data){
             seldata = data;
         }
       var pagedData = seldata.slice((page - 1) * pageSize, page * pageSize);
@@ -102,10 +102,10 @@
           
         if (searchText) {
           var ft = searchText.toLowerCase();
-          $http.get('Data/arregloVenta.json').success(function (largeLoad) {
-              console.log("asdwww",largeLoad.results);
+          $http.get('Data/figuras.json').success(function (largeLoad) {
+              console.log("asdwww",largeLoad.data);
             
-            data = largeLoad.results.filter(function(item) {
+            data = largeLoad.data.filter(function(item) {
              //  console.log("imprimiendo",item) 
                var rest = (JSON.stringify(item).toLowerCase().indexOf(ft) != -1);
                 console.log(item,rest);
@@ -116,7 +116,7 @@
             $scope.setPagingData(data,page,pageSize);
           });
         } else {
-          $http.get('Data/arregloVenta.json').success(function (largeLoad) {
+          $http.get('Data/figuras.json').success(function (largeLoad) {
             $scope.setPagingData(largeLoad,page,pageSize);
           });
         }
@@ -164,12 +164,8 @@
         data:  'myData',
          //El campo Field debe coincidir con su ubicacion dentro de la respuesta Json
            columnDefs: [
-       //  {field: 'id', displayName: 'ID'},
-         {field: 'fecha', displayName: 'Fecha'},
-         {field: 'sorteo.codigo', displayName: 'Sorteo'},
-         {field: 'asesor.nombre', displayName: 'Asesor'},
-         {field: 'carton[0].nombre', displayName: 'Tablas'},    
-         {field: 'serie', displayName: 'Serie'}    
+       //  {field: 'id', displayName: 'ID'},           
+         {field: 'nombre', displayName: 'Nombre'}    
                 
          
        ],       
@@ -197,7 +193,7 @@
      
      
      
-   $scope.administrarVenta = function (){
+   $scope.administrarFigura = function (){
         
         var service = { 
             

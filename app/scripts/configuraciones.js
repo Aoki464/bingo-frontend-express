@@ -9,7 +9,7 @@
  */
 
 
- angular.module('VentaApp', ['ngGrid']).controller('VentaCtrl', function ($scope, $http, $location) {
+ angular.module('ConfiguracionesApp', ['ngGrid']).controller('ConfiguracionesCtrl', function ($scope, $http, $location) {
     $scope.venta = null;
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -102,7 +102,7 @@
           
         if (searchText) {
           var ft = searchText.toLowerCase();
-          $http.get('Data/arregloVenta.json').success(function (largeLoad) {
+          $http.get('Data/configuraciones.json').success(function (largeLoad) {
               console.log("asdwww",largeLoad.results);
             
             data = largeLoad.results.filter(function(item) {
@@ -116,7 +116,7 @@
             $scope.setPagingData(data,page,pageSize);
           });
         } else {
-          $http.get('Data/arregloVenta.json').success(function (largeLoad) {
+          $http.get('Data/configuraciones.json').success(function (largeLoad) {
             $scope.setPagingData(largeLoad,page,pageSize);
           });
         }
@@ -163,13 +163,11 @@
      $scope.gridOptions = {
         data:  'myData',
          //El campo Field debe coincidir con su ubicacion dentro de la respuesta Json
+         //El campo displayName es el nombre que se ve en la interface
            columnDefs: [
-       //  {field: 'id', displayName: 'ID'},
-         {field: 'fecha', displayName: 'Fecha'},
-         {field: 'sorteo.codigo', displayName: 'Sorteo'},
-         {field: 'asesor.nombre', displayName: 'Asesor'},
-         {field: 'carton[0].nombre', displayName: 'Tablas'},    
-         {field: 'serie', displayName: 'Serie'}    
+         {field: 'propiedad', displayName: 'Propiedad'},
+         {field: 'valor', displayName: 'Valores'},
+         
                 
          
        ],       
@@ -225,7 +223,7 @@
             
               $http({
              method : 'GET',           
-             url : 'Data/Venta.Json',  
+             url : 'Data/Configuraciones.Json',  
              headers:{'Access-Control-Allow-Credentials': 'true'}
        }).success(function(data, status, headers, config) {
              $scope.status = status;

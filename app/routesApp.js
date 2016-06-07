@@ -1,10 +1,15 @@
 'use strict';
+//aqui pongo el nombre de los servicios que creo
 var inicioApp = angular.module('inicioApp', [
     'ui.router',
     'ngGrid',
     'loginApp',
+    //'Paginacion',
     'listaUsuariosApp',
     'detalleRutinaApp',
+    'FiguraApp',
+    'ConfiguracionesApp',
+    'AsignacionApp',
     'VentaApp'
 ]); 
  
@@ -32,6 +37,24 @@ inicioApp.config(['$stateProvider', '$urlRouterProvider',
             url: '/listaVenta',
             templateUrl: 'views/listaVenta.html',
             controller: 'VentaCtrl'       
+
+        })
+      .state('listaFiguras', {
+            url: '/listaFiguras',
+            templateUrl: 'views/listaFiguras.html',
+            controller: 'FiguraCtrl'       
+
+        })
+      .state('listaConfiguraciones', {
+            url: '/listaConfiguraciones',
+            templateUrl: 'views/configuraciones.html',
+            controller: 'ConfiguracionesCtrl'       
+
+        })
+      .state('listaAsignaciones', {
+            url: '/listaAsignacion',
+            templateUrl: 'views/listaAsignacion.html',
+            controller: 'AsignacionCtrl'       
 
         })
 		.state('usuarios', {

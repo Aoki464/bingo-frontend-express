@@ -1,14 +1,3 @@
-/**
-Solicitud de configuracion de las figuras
-GET
-Request URL:http://localhost:8084/war/jaxrs/figura/configuracion?token=6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu&casillas=0
-
-token:6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
-casillas:0
-
-
-
-**/
 {
 	"data" : [{
 			"codigo" : 32,
