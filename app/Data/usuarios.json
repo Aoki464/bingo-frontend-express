@@ -1,0 +1,18 @@
+﻿{
+	"totalCount": 2,
+	"firstResult": 0,
+	"maxResult": 150,
+	"results": [{
+		"estado": "ACTIVO",
+		"id": 1,
+		"personaId": 1,
+		"userName": "balotera",
+		"password": "1toi3mufo840e7otmbe7t1r91p"
+	}, {
+		"estado": "ACTIVO",
+		"id": 2,
+		"personaId": 2,
+		"userName": "sucursal",
+		"password": "711be3iidqb6lrsln0avp0v21u"
+	}]
+}

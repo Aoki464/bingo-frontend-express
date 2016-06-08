@@ -10,6 +10,9 @@ var inicioApp = angular.module('inicioApp', [
     'FiguraApp',
     'ConfiguracionesApp',
     'AsignacionApp',
+    'PersonaApp',
+    'UsuarioBingoApp',
+    'SorteoApp',
     'VentaApp'
 ]); 
  
@@ -55,6 +58,25 @@ inicioApp.config(['$stateProvider', '$urlRouterProvider',
             url: '/listaAsignacion',
             templateUrl: 'views/listaAsignacion.html',
             controller: 'AsignacionCtrl'       
+
+        })
+      .state('listaPersonas', {
+            url: '/listaPersonas',
+            templateUrl: 'views/listaPersonas.html',
+            controller: 'PersonaCtrl'       
+
+        }) 
+       
+      .state('listaUsuariosBingo', {
+            url: '/listaUsuariosBingo',
+            templateUrl: 'views/listaUsuariosBingo.html',
+            controller: 'UsuarioBingoCtrl'       
+
+        })
+      .state('listaSorteo', {
+            url: '/listaSorteo',
+            templateUrl: 'views/listaSorteo.html',
+            controller: 'SorteoCtrl'       
 
         })
 		.state('usuarios', {

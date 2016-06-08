@@ -1,20 +1,111 @@
-/**
-
-GET
-
-http://localhost:8084/war/jaxrs/sorteo?caso=1&pagina=-1&token=6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu&keyword=&keyword2=
-caso:1
-pagina:-1
-token:6g61sdr0gh455h5f08np859rna6dsjse67a54aliu4vgurnnl1nu
-keyword:
-keyword2:
-
-*/
 {
-	"totalCount" : 0,
-	"firstResult" : 0,
-	"maxResult" : 150,
-	"results" : []
+	"totalCount": 3,
+	"firstResult": 0,
+	"maxResult": 150,
+	"results": [{
+		"id": 3,
+		"inscrito": 0,
+		"tipoSorteo": "TRADICIONAL",
+		"estadoSorteo": "ACTIVO",
+		"tipoPremio": "GARANTIZADO",
+		"fecha": "2016-05-24 11:25:00",
+		"publicidad": false,
+		"cantidadBalotasPub": null,
+		"valorCarton": 1000,
+		"ejecucionLocal": true,
+		"automatico": false,
+		"velocidadBalotas": 10,
+		"premios": [{
+			"id": 3,
+			"premioGarantizado": 200000,
+			"porcentajecasa": null,
+			"porcentajeCliente": null,
+			"porcentajeAcumulado": null,
+			"ganado": false,
+			"reclamado": false,
+			"sorteo": {
+				"codigo": 3,
+				"nombre": "3",
+				"adicion": ""
+			},
+			"figuras": [{
+				"codigo": 59,
+				"nombre": "Asterisco",
+				"adicion": ""
+			}],
+			"premios": []
+		}],
+		"videos": [],
+		"conAudio": false
+	}, {
+		"id": 2,
+		"inscrito": 4,
+		"tipoSorteo": "TRADICIONAL",
+		"estadoSorteo": "SIGUIENTE",
+		"tipoPremio": "GARANTIZADO",
+		"fecha": "2016-05-24 11:20:00",
+		"publicidad": false,
+		"cantidadBalotasPub": null,
+		"valorCarton": 1000,
+		"ejecucionLocal": true,
+		"automatico": false,
+		"velocidadBalotas": 10,
+		"premios": [{
+			"id": 2,
+			"premioGarantizado": 20000,
+			"porcentajecasa": null,
+			"porcentajeCliente": null,
+			"porcentajeAcumulado": null,
+			"ganado": false,
+			"reclamado": false,
+			"sorteo": {
+				"codigo": 2,
+				"nombre": "2",
+				"adicion": ""
+			},
+			"figuras": [{
+				"codigo": 59,
+				"nombre": "Asterisco",
+				"adicion": ""
+			}],
+			"premios": []
+		}],
+		"videos": [],
+		"conAudio": false
+	}, {
+		"id": 1,
+		"inscrito": 2,
+		"tipoSorteo": "TRADICIONAL",
+		"estadoSorteo": "FINALIZADO",
+		"tipoPremio": "GARANTIZADO",
+		"fecha": "2016-05-03 10:42:00",
+		"publicidad": false,
+		"cantidadBalotasPub": null,
+		"valorCarton": 0,
+		"ejecucionLocal": true,
+		"automatico": false,
+		"velocidadBalotas": 5,
+		"premios": [{
+			"id": 1,
+			"premioGarantizado": 0,
+			"porcentajecasa": null,
+			"porcentajeCliente": null,
+			"porcentajeAcumulado": null,
+			"ganado": false,
+			"reclamado": false,
+			"sorteo": {
+				"codigo": 1,
+				"nombre": "1",
+				"adicion": ""
+			},
+			"figuras": [{
+				"codigo": 59,
+				"nombre": "Asterisco",
+				"adicion": ""
+			}],
+			"premios": []
+		}],
+		"videos": [],
+		"conAudio": false
+	}]
 }
-
-
