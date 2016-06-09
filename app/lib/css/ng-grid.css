@@ -323,8 +323,9 @@
   white-space: nowrap;
 }
 .ngRow {
-  position: absolute;
-  border-bottom: 1px solid #d4d4d4;
+  display : table-row;
+  height: auto !important;
+  position: static;
 }
 .ngRow.odd {
   background-color: #fdfdfd;
@@ -336,25 +337,19 @@
   background-color: #c9dde1;
 }
 .ngCell {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background-color: inherit;
+  display : table-cell;
+  height: auto !important;
+  overflow:visible;
+  position: static;
 }
 .ngCell.pinned {
   z-index: 1;
 }
 .ngCellText {
-  padding: 5px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  white-space: nowrap;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  height: auto !important;
+  white-space: normal;
+  overflow:visible;
+    word-wrap: break-word;
 }
 .ngSelectionCell {
   margin-top: 9px;

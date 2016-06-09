@@ -60,77 +60,23 @@
     };
      
             
-    //$scope.gridOptions.pagingOptions = $scope.pagingOptions;
+    
             console.log("asdfasdfasf" + $scope.pagingOptions.pageSizes[0]);
             if($scope.pageSize == 10)
             {
                 console.log("alert");
             }
     
-     //console.log("aaaaassdsdsdsd" + $scope.pagingOptions.pageSizes[0]);
+     
     
-    $scope.setPagingData = function(data,page,pageSize){
-       // data = $scope.mydata;
-        console.log("aaaaaa", data)
-        
-        //var seldata = (data.results)?data.results:data;
-        var seldata = data
-        //Con el if puedo verificar si algo es nulo, y preguntar por la propiedad del objeto o en este
-        //caso la columna del json, en caso de que este definido
-        
-        // responde false si no esta definido
-        if(!data.results){
-            seldata = data;
-        }
-      var pagedData = seldata.slice((page - 1) * pageSize, page * pageSize);
-      $scope.myData = pagedData;
-        
-        console.log("fff",pagedData);
-      
-        $scope.totalServerItems = seldata.length;
-      if (!$scope.$$phase) {
-        $scope.$apply();
-      }
-    };
-       
-  
-       
-    //Aqui llama al servicio para listar los usuarios y ponerlos dentro de la paginacion
-    $scope.getPagedDataAsync = function (pageSize, page, searchText) {
-      setTimeout(function () {
-        var data;
+     /*Esta es la funcion encargada de que la data del json se muestre correctamente en la tabla del formulario     */
+     
+     /*Lo que hace el metodo es analizar el json de respuesta del servicio $http y organizar correctamente los premios y las figuras de cada sorteo y crear un arreglo de respuesta creado para que solo*/
+      function respuestaTablaSorteo(largeLoad){
+         //largeload = 0;
           
-        if (searchText) {
-             
-          var ft = searchText.toLowerCase();
-          $http.get('Data/sorteos.json').success(function (largeLoad) {
-              console.log("asdwww",largeLoad.results);             
-              
-            data = largeLoad.results.filter(function(item) {
-             //  console.log("imprimiendo",item) 
-               var rest = (JSON.stringify(item).toLowerCase().indexOf(ft) != -1);
-                console.log(item,rest);
-              return rest;
-                
-            });
-               //console.log("eeeeee",data)   
-              
-              
-              
-            $scope.setPagingData(data,page,pageSize);
-          });
-        } else {
-          $http.get('Data/sorteos.json').success(function (largeLoad) {
-              
-                //Seccion para obtener las figuras y los premios
-             
-              var l = largeLoad.results.length;
-              console.log(l);
-              //var json = (JSON.stringify(largeLoad.results);
-                console.log("data", largeLoad.results[0].premios[0].premioGarantizado);
-               //console.log("lo que sea",largeLoad.results);
-              var arrayFiguras = [];
-              var arrayPremios = [];
+          //  var arrayFiguras = [];
+              //var arrayPremios = [];
               
             //  var auxPremios = [];
               
@@ -138,7 +84,7 @@
               var unePremio = "";
               //Este es el arreglo que almacenara la data que se mostrara en la tabla dentro del formulario
               var respuesta = [];
-              
+              //Los ciclos se vuelven mas rapidos si se agregan como en la linea 142
                 for(var i = 0, results = largeLoad.results.length; i<results; i++)     // for(var listapremio in largeLoad.results)
                   {
                       //console.log("lo que sea",largeLoad.results[i]);                  
@@ -148,12 +94,12 @@
                     for(var j = 0, premios = largeLoad.results[i].premios.length; j< premios;j++)   //  for (premio in listapremio.premios)
                     {     
                               // arrayFiguras.push(largeLoad.results[i].premios[j].figuras);
-                        unePremio = unePremio+ "," + largeLoad.results[i].premios[j].premioGarantizado;
+                        unePremio = unePremio + ", " + largeLoad.results[i].premios[j].premioGarantizado;
                               
                          
                             for(var k = 0, figuras = largeLoad.results[i].premios[j].figuras.length; k < figuras; k++)
                               {
-                                  uneFigura = uneFigura + "," + largeLoad.results[i].premios[j].figuras[k].nombre;
+                                  uneFigura = uneFigura + ", " + largeLoad.results[i].premios[j].figuras[k].nombre;
                               }
                                    
                               
@@ -161,10 +107,10 @@
                       
                       /*Deben estar en esta parte del ciclo ya que los datos del json estan especificamente dentro del arreglo de premios, para entenderlo, ver el json de respuesta*/
                       
-                      arrayPremios.push(unePremio.substring(1));
+                     // arrayPremios.push(unePremio.substring(1));
                       console.log("premios" + unePremio.substring(1));
                       
-                      arrayFiguras.push(uneFigura.substring(1));
+                      //arrayFiguras.push(uneFigura.substring(1));
                       console.log("Figuras" + uneFigura.substring(1));
                      /* Cree un nuevo objeto para almacenar correctamente la respuesta de la consulta $http y poder mostrarla en
                       la tabla correspondiente a la lista de sorteos*/
@@ -192,34 +138,77 @@
                       
                   }       
               
-              console.log("todos los premios", arrayPremios);
-              console.log("todos las figuras", arrayFiguras);
+          
               console.log("todos los sorteos aqui", respuesta);
               
-            //  console.log("Todos los premios",arrayPremios[0][0].premioGarantizado);
-            //  console.log("Todas las figuras",arrayFiguras[0][0].nombre); 
-              //auxPremios contendra todos los premios de un solo sorteo
-              //auxFiguras contendra todas las figuras de un solo sorteo
+          
+         return respuesta;
+     }
+     
+    $scope.setPagingData = function(data,page,pageSize){
+       // data = $scope.mydata;
+        console.log("aaaaaa", data)
+        
+        //var seldata = (data.results)?data.results:data;
+        var seldata = data
+        //Con el if puedo verificar si algo es nulo, y preguntar por la propiedad del objeto o en este
+        //caso la columna del json, en caso de que este definido
+        
+        // responde false si no esta definido
+        if(!data.results){
+            seldata = data;
+        }
+      var pagedData = seldata.slice((page - 1) * pageSize, page * pageSize);
+      $scope.myData = pagedData;
+        
+        console.log("fff",pagedData);
+      
+        $scope.totalServerItems = seldata.length;
+      if (!$scope.$$phase) {
+        $scope.$apply();
+      }
+    };  
+    
+     
+       
+    //Aqui llama al servicio para listar los usuarios y ponerlos dentro de la paginacion
+    $scope.getPagedDataAsync = function (pageSize, page, searchText) {
+      setTimeout(function () {
+        var data;
+          
+        if (searchText) {
+             
+          var ft = searchText.toLowerCase();
+          $http.get('Data/sorteos.json').success(function (largeLoad) {
+//           
+              
+              
+            data = respuestaTablaSorteo(largeLoad).filter(function(item) {
+             //  console.log("imprimiendo",item) 
+               var rest = (JSON.stringify(item).toLowerCase().indexOf(ft) != -1);
+                console.log(item,rest);
+              return rest;
+                
+            });
+               //console.log("eeeeee",data)   
               
               
               
-             /* for(var p = 0; p<arrayPremios.length;p++)
-                  {
-                      for(var q = 0; q<arrayPremios[p].length;q++)
-                          {
-                              unePremio = unePremio+ "," + arrayPremios[p][q].premioGarantizado;
-                              
-                          }
-                     auxPremios.push(unepremio);
-                     console.log("premios" + unePremio);
-                     unePremio = "";
-                     
-                  }*/
-              //console.log("premios" + unePremio);
-
+            $scope.setPagingData(data,page,pageSize);
+          });
+        } else {
+          $http.get('Data/sorteos.json').success(function (largeLoad) {
+              
+                //Seccion para obtener las figuras y los premios
+             
               
               
-            $scope.setPagingData(respuesta,page,pageSize);
+                console.log("data", largeLoad.results[0].premios[0].premioGarantizado);
+               
+            
+          // saludar(largeLoad)
+              
+            $scope.setPagingData(respuestaTablaSorteo(largeLoad),page,pageSize);
           });
         }
       }, 100);
@@ -294,7 +283,7 @@
         showFilter: false,
         showGroupPanel: true,
         showFooter: true,
-         enableColumnResize: true,
+        enableColumnResize: true,         
          //useExternalSorting: true,
         //useExternalFilter: true,
         //sortInfo: $scope.sortOptions,        
