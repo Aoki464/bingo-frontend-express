@@ -69,12 +69,12 @@
     
      //console.log("aaaaassdsdsdsd" + $scope.pagingOptions.pageSizes[0]);
     
-    $scope.setPagingData = function(data,page,pageSize,premios){
+    $scope.setPagingData = function(data,page,pageSize){
        // data = $scope.mydata;
         console.log("aaaaaa", data)
         
         //var seldata = (data.results)?data.results:data;
-        var seldata = data.results
+        var seldata = data
         //Con el if puedo verificar si algo es nulo, y preguntar por la propiedad del objeto o en este
         //caso la columna del json, en caso de que este definido
         
@@ -84,8 +84,6 @@
         }
       var pagedData = seldata.slice((page - 1) * pageSize, page * pageSize);
       $scope.myData = pagedData;
-        $scope.listaPremios = premios;
-        console.log(premios);
         
         console.log("fff",pagedData);
       
@@ -125,8 +123,7 @@
           $http.get('Data/sorteos.json').success(function (largeLoad) {
               
                 //Seccion para obtener las figuras y los premios
-              var uneFigura = "";
-              var unePremio = "";
+             
               var l = largeLoad.results.length;
               console.log(l);
               //var json = (JSON.stringify(largeLoad.results);
@@ -134,33 +131,95 @@
                //console.log("lo que sea",largeLoad.results);
               var arrayFiguras = [];
               var arrayPremios = [];
-                for(var i = 0; i<largeLoad.results.length; i++)     // for(var listapremio in largeLoad.results)
+              
+            //  var auxPremios = [];
+              
+               var uneFigura = "";
+              var unePremio = "";
+              //Este es el arreglo que almacenara la data que se mostrara en la tabla dentro del formulario
+              var respuesta = [];
+              
+                for(var i = 0, results = largeLoad.results.length; i<results; i++)     // for(var listapremio in largeLoad.results)
                   {
                       //console.log("lo que sea",largeLoad.results[i]);                  
                       
-                      arrayPremios.push(largeLoad.results[i].premios);
+                    //  arrayPremios.push(largeLoad.results[i].premios);
                       
-                    for(var j = 0; j< largeLoad.results[i].premios.length;j++)   //  for (premio in listapremio.premios)
-                          {     
-                               arrayFiguras.push(largeLoad.results[i].premios[j].figuras);
-                                                           
+                    for(var j = 0, premios = largeLoad.results[i].premios.length; j< premios;j++)   //  for (premio in listapremio.premios)
+                    {     
+                              // arrayFiguras.push(largeLoad.results[i].premios[j].figuras);
+                        unePremio = unePremio+ "," + largeLoad.results[i].premios[j].premioGarantizado;
+                              
+                         
+                            for(var k = 0, figuras = largeLoad.results[i].premios[j].figuras.length; k < figuras; k++)
+                              {
+                                  uneFigura = uneFigura + "," + largeLoad.results[i].premios[j].figuras[k].nombre;
+                              }
+                                   
+                              
+                    }
+                      
+                      /*Deben estar en esta parte del ciclo ya que los datos del json estan especificamente dentro del arreglo de premios, para entenderlo, ver el json de respuesta*/
+                      
+                      arrayPremios.push(unePremio.substring(1));
+                      console.log("premios" + unePremio.substring(1));
+                      
+                      arrayFiguras.push(uneFigura.substring(1));
+                      console.log("Figuras" + uneFigura.substring(1));
+                     /* Cree un nuevo objeto para almacenar correctamente la respuesta de la consulta $http y poder mostrarla en
+                      la tabla correspondiente a la lista de sorteos*/
+                      var sorteo = {
+                          id: largeLoad.results[i].id,
+                          fecha: largeLoad.results[i].fecha,
+                          tipoSorteo: largeLoad.results[i].tipoSorteo,
+                          tipoPremio: largeLoad.results[i].tipoPremio,
+                          estadoSorteo: largeLoad.results[i].estadoSorteo,
+                          valorCarton: largeLoad.results[i].valorCarton,
+                          inscritos: largeLoad.results[i].inscrito,
+                          premios: unePremio.substring(1),
+                          figuras: uneFigura.substring(1)                             
+                      };
+                      respuesta.push(sorteo);
+                      
+                       /*Tengo que limpiar los string que agrupan los premios y las figuras para que almacene cada grupo
+                       individualmente*/
+                               unePremio = "";
+                      
+                            
+                               uneFigura = "";
+                      
+                      
+                      
+                  }       
+              
+              console.log("todos los premios", arrayPremios);
+              console.log("todos las figuras", arrayFiguras);
+              console.log("todos los sorteos aqui", respuesta);
+              
+            //  console.log("Todos los premios",arrayPremios[0][0].premioGarantizado);
+            //  console.log("Todas las figuras",arrayFiguras[0][0].nombre); 
+              //auxPremios contendra todos los premios de un solo sorteo
+              //auxFiguras contendra todas las figuras de un solo sorteo
+              
+              
+              
+             /* for(var p = 0; p<arrayPremios.length;p++)
+                  {
+                      for(var q = 0; q<arrayPremios[p].length;q++)
+                          {
+                              unePremio = unePremio+ "," + arrayPremios[p][q].premioGarantizado;
+                              
                           }
-                      
-                      
-                  }              
-              console.log("Todos los premios",arrayPremios);
-              console.log("Todas las figuras",arrayFiguras); 
+                     auxPremios.push(unepremio);
+                     console.log("premios" + unePremio);
+                     unePremio = "";
+                     
+                  }*/
+              //console.log("premios" + unePremio);
+
               
               
-//              for (var p = 0; p<arrayPremios.length; p++)
-//                  {
-//                      console.log("Todos los premios",arrayPremios[p]);
-//                      unePremio = unePremio + "," + arrayPremios[p][0].premioGarantizado;
-//                      console.log(unePremio);
-//                  }
-              
-              
-            $scope.setPagingData(largeLoad,page,pageSize, arrayPremios);
+            $scope.setPagingData(respuesta,page,pageSize);
           });
         }
       }, 100);
@@ -212,8 +271,9 @@
          {field: 'tipoPremio', displayName: 'Tipo de premio'},
          {field: 'estadoSorteo', displayName: 'Estado'},
          {field: 'valorCarton', displayName: 'Valor del carton'},
-         {field: 'inscrito', displayName: 'Inscritos'},
-         {field: 'listaPremios', displayName: 'Premios'}  
+         {field: 'inscritos', displayName: 'Inscritos'},
+         {field: 'premios', displayName: 'Premios'},  
+         {field: 'figuras', displayName: 'Figuras'} 
                
          
                

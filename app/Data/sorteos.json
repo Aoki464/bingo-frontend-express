@@ -16,7 +16,7 @@
 		"automatico": false,
 		"velocidadBalotas": 10,
 		"premios": [{
-			"id": 3,
+			"id": 4,
 			"premioGarantizado": 200000,
 			"porcentajecasa": null,
 			"porcentajeCliente": null,
@@ -31,6 +31,61 @@
 			"figuras": [{
 				"codigo": 59,
 				"nombre": "Asterisco",
+				"adicion": ""
+			}],
+			"premios": []
+		}, {
+			"id": 5,
+			"premioGarantizado": 100000,
+			"porcentajecasa": null,
+			"porcentajeCliente": null,
+			"porcentajeAcumulado": null,
+			"ganado": false,
+			"reclamado": false,
+			"sorteo": {
+				"codigo": 3,
+				"nombre": "3",
+				"adicion": ""
+			},
+			"figuras": [{
+				"codigo": 1,
+				"nombre": "Linea Horizontal_1",
+				"adicion": ""
+			}, {
+				"codigo": 2,
+				"nombre": "Linea Horizontal_2",
+				"adicion": ""
+			}, {
+				"codigo": 3,
+				"nombre": "Linea Horizontal_3",
+				"adicion": ""
+			}, {
+				"codigo": 4,
+				"nombre": "Linea Horizontal_4",
+				"adicion": ""
+			}, {
+				"codigo": 5,
+				"nombre": "Linea Horizontal_5",
+				"adicion": ""
+			}, {
+				"codigo": 6,
+				"nombre": "Columna_B",
+				"adicion": ""
+			}, {
+				"codigo": 7,
+				"nombre": "Columna_I",
+				"adicion": ""
+			}, {
+				"codigo": 8,
+				"nombre": "Columna_N",
+				"adicion": ""
+			}, {
+				"codigo": 9,
+				"nombre": "Columna_G",
+				"adicion": ""
+			}, {
+				"codigo": 10,
+				"nombre": "Columna_O",
 				"adicion": ""
 			}],
 			"premios": []
