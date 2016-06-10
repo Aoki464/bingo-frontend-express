@@ -1,0 +1,188 @@
+{
+	"totalCount": 10,
+	"firstResult": 0,
+	"maxResult": 150,
+	"results": [{
+		"id": 10,
+		"nombre": "Balota de la suerte 2",
+		"estado": "ACTIVO",
+		"condicion1": "SENCILLO",
+		"condicion2": 75,
+		"premioBase": 1000000,
+		"premioMonto": 100000,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 81,
+			"nombre": "cruz 2",
+			"adicion": ""
+		}, {
+			"codigo": 82,
+			"nombre": "cruz 3",
+			"adicion": ""
+		}, {
+			"codigo": 83,
+			"nombre": "cruz 4",
+			"adicion": ""
+		}, {
+			"codigo": 27,
+			"nombre": "Cruz Grande",
+			"adicion": ""
+		}],
+		"incremento": 3,
+		"fecha": "2016-06-10 12:57:14",
+		"variacion": false
+	}, {
+		"id": 9,
+		"nombre": "Balota de la Suerte",
+		"estado": "ACTIVO",
+		"condicion1": "BALOTA_SUERTE",
+		"condicion2": 54,
+		"premioBase": 50000,
+		"premioMonto": 50005,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 33,
+			"nombre": "Pleno",
+			"adicion": ""
+		}],
+		"incremento": 5,
+		"fecha": "2014-01-16 00:00:00",
+		"variacion": false
+	}, {
+		"id": 8,
+		"nombre": "Pleno 57",
+		"estado": "ACTIVO",
+		"condicion1": "PLENO",
+		"condicion2": 57,
+		"premioBase": 15000,
+		"premioMonto": 15005,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 33,
+			"nombre": "Pleno",
+			"adicion": ""
+		}],
+		"incremento": 5,
+		"fecha": "2014-01-16 00:00:00",
+		"variacion": false
+	}, {
+		"id": 7,
+		"nombre": "Pleno 56",
+		"estado": "ACTIVO",
+		"condicion1": "PLENO",
+		"condicion2": 56,
+		"premioBase": 20000,
+		"premioMonto": 20005,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 33,
+			"nombre": "Pleno",
+			"adicion": ""
+		}],
+		"incremento": 5,
+		"fecha": "2014-01-16 00:00:00",
+		"variacion": false
+	}, {
+		"id": 6,
+		"nombre": "Pleno 55",
+		"estado": "ACTIVO",
+		"condicion1": "PLENO",
+		"condicion2": 55,
+		"premioBase": 25000,
+		"premioMonto": 25005,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 33,
+			"nombre": "Pleno",
+			"adicion": ""
+		}],
+		"incremento": 5,
+		"fecha": "2014-01-16 00:00:00",
+		"variacion": false
+	}, {
+		"id": 5,
+		"nombre": "Pleno 54",
+		"estado": "ACTIVO",
+		"condicion1": "PLENO",
+		"condicion2": 54,
+		"premioBase": 30000,
+		"premioMonto": 30010,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 33,
+			"nombre": "Pleno",
+			"adicion": ""
+		}],
+		"incremento": 10,
+		"fecha": "2014-01-16 00:00:00",
+		"variacion": false
+	}, {
+		"id": 4,
+		"nombre": "Pleno 53",
+		"estado": "ACTIVO",
+		"condicion1": "PLENO",
+		"condicion2": 53,
+		"premioBase": 35000,
+		"premioMonto": 35010,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 33,
+			"nombre": "Pleno",
+			"adicion": ""
+		}],
+		"incremento": 10,
+		"fecha": "2014-01-16 00:00:00",
+		"variacion": false
+	}, {
+		"id": 3,
+		"nombre": "Pleno 52",
+		"estado": "ACTIVO",
+		"condicion1": "PLENO",
+		"condicion2": 52,
+		"premioBase": 40000,
+		"premioMonto": 40010,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 33,
+			"nombre": "Pleno",
+			"adicion": ""
+		}],
+		"incremento": 10,
+		"fecha": "2014-01-16 00:00:00",
+		"variacion": false
+	}, {
+		"id": 2,
+		"nombre": "Pleno 51",
+		"estado": "ACTIVO",
+		"condicion1": "PLENO",
+		"condicion2": 51,
+		"premioBase": 45000,
+		"premioMonto": 45010,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 33,
+			"nombre": "Pleno",
+			"adicion": ""
+		}],
+		"incremento": 10,
+		"fecha": "2014-01-16 00:00:00",
+		"variacion": false
+	}, {
+		"id": 1,
+		"nombre": "Pleno 50",
+		"estado": "ACTIVO",
+		"condicion1": "PLENO",
+		"condicion2": 50,
+		"premioBase": 50000,
+		"premioMonto": 50010,
+		"numSorteo": null,
+		"figuras": [{
+			"codigo": 33,
+			"nombre": "Pleno",
+			"adicion": ""
+		}],
+		"incremento": 10,
+		"fecha": "2014-01-16 00:00:00",
+		"variacion": false
+	}]
+}

@@ -1,0 +1,59 @@
+﻿{
+	"totalCount": 0,
+	"firstResult": 0,
+	"maxResult": 3,
+	"results": [{
+		"sorteo": 3,
+		"fechahora": "2016-05-24 11:25:00",
+		"precio": 1000,
+		"recaudo": 0,
+		"premiosAdicionales": null,
+		"premioPrincipal": [{
+			"codigo": 6,
+			"nombre": "200000",
+			"adicion": ""
+		}, {
+			"codigo": 7,
+			"nombre": "100000",
+			"adicion": ""
+		}, {
+			"codigo": 8,
+			"nombre": "630000",
+			"adicion": ""
+		}],
+		"premioPromocional": null,
+		"cartones": 0,
+		"tabla": null,
+		"cartonGanador": null
+	}, {
+		"sorteo": 2,
+		"fechahora": "2016-05-24 11:20:00",
+		"precio": 1000,
+		"recaudo": 4000,
+		"premiosAdicionales": null,
+		"premioPrincipal": [{
+			"codigo": 2,
+			"nombre": "20000",
+			"adicion": ""
+		}],
+		"premioPromocional": null,
+		"cartones": 4,
+		"tabla": null,
+		"cartonGanador": null
+	}, {
+		"sorteo": 1,
+		"fechahora": "2016-05-03 10:42:00",
+		"precio": 0,
+		"recaudo": 0,
+		"premiosAdicionales": null,
+		"premioPrincipal": [{
+			"codigo": 1,
+			"nombre": "0",
+			"adicion": ""
+		}],
+		"premioPromocional": null,
+		"cartones": 2,
+		"tabla": null,
+		"cartonGanador": null
+	}]
+}
