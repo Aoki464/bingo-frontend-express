@@ -149,17 +149,12 @@
      
      
      
-//     function saludar() {
-//  //init();
-//  $scope.refresh = true;
-//         
-//};
-//     window.onload = saludar();
+$scope.botonEditar = '<button type="button" class="btn btn-default btn-circle" name="detalle" ng-click="" > <i class="glyphicon glyphicon-edit"></i></button> ';
+     
+   $scope.botonBorrar = '<button type="button" class="btn btn-default btn-circle" name="detalle" ng-click=""> <i class="glyphicon glyphicon-remove"></i></button>';
      
      
-      
      
-//      $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage);
      $scope.gridOptions = {
         data:  'myData',
          //El campo Field debe coincidir con su ubicacion dentro de la respuesta Json
@@ -171,6 +166,8 @@
          {field: 'telfono', displayName: 'Telefono'},
          {field: 'celular', displayName: 'Celular'},
          {field: 'email', displayName: 'Email'},
+         {displayName: 'Editar', cellTemplate: $scope.botonEditar},
+         {displayName: 'Borrar', cellTemplate: $scope.botonBorrar}
          
                 
          

@@ -244,8 +244,13 @@
      }
      
        
+      $scope.botonEditar = '<button type="button" class="btn btn-default btn-circle" name="detalle" ng-click="" > <i class="glyphicon glyphicon-edit"></i></button> ';
      
-//      $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage);
+   $scope.botonBorrar = '<button type="button" class="btn btn-default btn-circle" name="detalle" ng-click=""> <i class="glyphicon glyphicon-remove"></i></button>';
+     
+         
+     
+
      $scope.gridOptions = {
         data:  'myData',
          //El campo Field debe coincidir con su ubicacion dentro de la respuesta Json
@@ -258,8 +263,10 @@
          {field: 'valorCarton', displayName: 'Valor del carton'},
          {field: 'inscritos', displayName: 'Inscritos'},
          {field: 'premios', displayName: 'Premios'},  
-         {field: 'figuras', displayName: 'Figuras'} 
-               
+         {field: 'figuras', displayName: 'Figuras'},
+         {displayName: 'Editar', cellTemplate: $scope.botonEditar},
+         {displayName: 'Borrar', cellTemplate: $scope.botonBorrar}
+         
          
                
       

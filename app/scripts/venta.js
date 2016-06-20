@@ -149,17 +149,9 @@
      
      
      
-//     function saludar() {
-//  //init();
-//  $scope.refresh = true;
-//         
-//};
-//     window.onload = saludar();
+
      
-     
-      
-     
-//      $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage);
+
      $scope.gridOptions = {
         data:  'myData',
          //El campo Field debe coincidir con su ubicacion dentro de la respuesta Json
@@ -169,7 +161,9 @@
          {field: 'sorteo.codigo', displayName: 'Sorteo'},
          {field: 'asesor.nombre', displayName: 'Asesor'},
          {field: 'carton[0].nombre', displayName: 'Tablas'},    
-         {field: 'serie', displayName: 'Serie'}    
+         {field: 'serie', displayName: 'Serie'}
+        
+               
                 
          
        ],       

@@ -132,7 +132,11 @@
       if (newVal !== oldVal && newVal.currentPage !== oldVal.currentPage) {
         $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
        
-      }       
+      }
+        else
+            {
+               $scope.pagingOptions.currentPage = 1 
+            }
     }, true);
 
     
@@ -148,25 +152,18 @@
      
      
      
+$scope.botonEditar = '<button type="button" class="btn btn-default btn-circle" name="detalle" ng-click="" > <i class="glyphicon glyphicon-edit"></i></button> ';
      
-//     function saludar() {
-//  //init();
-//  $scope.refresh = true;
-//         
-//};
-//     window.onload = saludar();
+   $scope.botonBorrar = '<button type="button" class="btn btn-default btn-circle" name="detalle" ng-click="" > <i class="glyphicon glyphicon-remove"></i></button>';
      
-     
-      
-     
-//      $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage);
      $scope.gridOptions = {
         data:  'myData',
          //El campo Field debe coincidir con su ubicacion dentro de la respuesta Json
            columnDefs: [
        //  {field: 'id', displayName: 'ID'},           
-         {field: 'nombre', displayName: 'Nombre'}    
-                
+         {field: 'nombre', displayName: 'Nombre'},           
+         {displayName: 'Editar', cellTemplate: $scope.botonEditar},
+         {displayName: 'Borrar', cellTemplate: $scope.botonBorrar}
          
        ],       
         filterOptions: $scope.filterOptions,  

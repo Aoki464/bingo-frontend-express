@@ -149,25 +149,19 @@
      
      
      
-//     function saludar() {
-//  //init();
-//  $scope.refresh = true;
-//         
-//};
-//     window.onload = saludar();
+$scope.botonEditar = '<button type="button" class="btn btn-default btn-circle" name="detalle" ng-click="" > <i class="glyphicon glyphicon-edit"></i></button> ';
      
+   $scope.botonBorrar = '<button type="button" class="btn btn-default btn-circle" name="detalle" ng-click=""> <i class="glyphicon glyphicon-remove"></i></button>';
      
-      
-     
-//      $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage);
      $scope.gridOptions = {
         data:  'myData',
          //El campo Field debe coincidir con su ubicacion dentro de la respuesta Json
          //El campo displayName es el nombre que se ve en la interface
            columnDefs: [
          {field: 'propiedad', displayName: 'Propiedad'},
-         {field: 'valor', displayName: 'Valores'},
-         
+         {field: 'valor', displayName: 'Valores'},         
+         {displayName: 'Editar', cellTemplate: $scope.botonEditar},
+         {displayName: 'Borrar', cellTemplate: $scope.botonBorrar}  
                 
          
        ],       
