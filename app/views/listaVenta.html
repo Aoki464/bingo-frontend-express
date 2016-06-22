@@ -16,14 +16,20 @@
         <button type="button" class="btn btn-default" name="Eliminar" ng-click="">
             <i class="glyphicon glyphicon-plus .blue">Agregar</i></button>
         <button type="button" class="btn btn-default" name="Eliminar" ng-click="">    
-            <i class="glyphicon glyphicon-export" ng-click="">Exportar</i></button>        
+            <i class="glyphicon glyphicon-export" ng-click="exportData()">Exportar</i></button>        
        </div>
 
        <br>
        <div align="center">
             <!--     Con esto se realiza el filtrado o busqueda de usuario    -->
-           <strong>Buscar Usuario:</strong><input type="text" ng-model="filterOptions.filterText" />
-             <div class="gridStyle" ng-grid="gridOptions"></div>
+           <strong>Buscar por     </strong>
+           <strong>Todos:</strong><input type="text" ng-model="filterOptions.filterText" />
+           <strong>Asesor:</strong><input type="text" ng-model="filterAsesor.filterTextAsesor" />
+           <strong>Sorteo:</strong><input type="text" ng-model="filterSorteo.filterTextSorteo" />
+          
+           
+           
+             <div class="gridStyle" ng-grid="gridOptions" id="exportable"></div>
        </div>
  
 </body>

@@ -17,6 +17,19 @@
       'Karma'
     ];
     
+     $scope.exportData = function () {     
+             
+             
+             var blob = new Blob([$scope.gridOptions.columnDefs], {
+            type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8"
+        });
+        saveAs(blob, "Report.xls");
+             //$scope.setPagingData(largeLoad,page,pageSize);
+             
+        
+        
+    };
+     
      //Lee la lista de ventas
 //     
 //          $http({
@@ -44,10 +57,27 @@
     
        //Paginacion y filtrado
    
-       $scope.filterOptions = {
+       $scope.filterOptions = {        
         filterText: '',
-        useExternalFilter: true
+        useExternalFilter: true,
+        caso:1
     };
+     
+       $scope.filterAsesor = {
+        filterTextAsesor: '',         
+        useExternalFilter: true,
+        caso: 3
+    };
+     
+     $scope.filterSorteo = {
+        filterTextSorteo: '',         
+        useExternalFilter: true,
+        caso: 3
+    };
+    
+   
+     
+     
       $scope.totalServerItems = 0; 
   
         //Se debe sacar la propiedad paging options fuera del metodo de readlist para que pueda leer la propiedad en el 
@@ -100,9 +130,16 @@
       setTimeout(function () {
         var data;
           
-        if (searchText) {
+        if (searchText) {       
+            
+          if ($scope.filterSorteo.filterTextSorteo != '')
+              {
+                  alert("entro");
+              }
+            
+            
           var ft = searchText.toLowerCase();
-          $http.get('Data/arregloVenta.json').success(function (largeLoad) {
+          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=3i9386uchpaja0a1qkdhqb68464cgblap2chvmu5li4d4kireg74&keyword1=&keyword2=').success(function (largeLoad) {
               console.log("asdwww",largeLoad.results);
             
             data = largeLoad.results.filter(function(item) {
@@ -115,8 +152,9 @@
                //console.log("eeeeee",data)              
             $scope.setPagingData(data,page,pageSize);
           });
+            
         } else {
-          $http.get('Data/arregloVenta.json').success(function (largeLoad) {
+          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=3i9386uchpaja0a1qkdhqb68464cgblap2chvmu5li4d4kireg74&keyword1=&keyword2=').success(function (largeLoad) {
             $scope.setPagingData(largeLoad,page,pageSize);
           });
         }
@@ -146,6 +184,26 @@
       }
     }, true);
      
+     $scope.$watch('filterAsesor', function (newVal, oldVal) {
+        //Con esto regresa a la pagina 1 y realiza la busqueda, significa que cada vez que busque, siempre quedara en la pagina 1
+        
+        $scope.pagingOptions.currentPage = 1;
+      if (newVal !== oldVal) {
+          //$scope.pagingOptions.currentPage = 1;
+        $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterAsesor.filterText);
+      }
+    }, true);
+     
+     $scope.$watch('filterSorteo', function (newVal, oldVal) {
+        //Con esto regresa a la pagina 1 y realiza la busqueda, significa que cada vez que busque, siempre quedara en la pagina 1
+        
+        $scope.pagingOptions.currentPage = 1;
+      if (newVal !== oldVal) {
+          //$scope.pagingOptions.currentPage = 1;
+        $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterSorteo.filterText);
+      }
+    }, true);
+     
      
      
      
@@ -168,7 +226,8 @@
          
        ],       
         filterOptions: $scope.filterOptions,  
-       
+         /*Esta propiedad cambia todos los textos dentro del ng-grid a excepcion de la data y el contenido de las mismas*/
+        i18n: 'es',
         pagingOptions: $scope.pagingOptions, 
            
         enablePaging: true,
