@@ -16,19 +16,7 @@
       'AngularJS',
       'Karma'
     ];
-    
-     $scope.exportData = function () {     
-             
-             
-             var blob = new Blob([$scope.gridOptions.columnDefs], {
-            type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8"
-        });
-        saveAs(blob, "Report.xls");
-             //$scope.setPagingData(largeLoad,page,pageSize);
-             
-        
-        
-    };
+
      
      //Lee la lista de ventas
 //     
@@ -63,11 +51,11 @@
         caso:1
     };
      
-       $scope.filterAsesor = {
+  /*     $scope.filterAsesor = {
         filterTextAsesor: '',         
         useExternalFilter: true,
-        caso: 3
-    };
+        caso: 2
+    };*/
      
      $scope.filterSorteo = {
         filterTextSorteo: '',         
@@ -131,31 +119,98 @@
         var data;
           
         if (searchText) {       
-            
-          if ($scope.filterSorteo.filterTextSorteo != '')
+            console.log ("lo que ahi aqui", $scope.filterOptions.filterText);
+              if ($scope.filterOptions.filterText != '' & $scope.filterOptions.filterText != null)
               {
-                  alert("entro");
+                  var ft = searchText.toLowerCase();
+                  $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=2l3qbo7gbroh9qgarilvlcejcs0psegehvo4de8fd4c275oba06s&keyword1=&keyword2=').success(function (largeLoad) {
+                      console.log("asdwww",largeLoad.results);
+
+                    data = largeLoad.results.filter(function(item) {
+                     //  console.log("imprimiendo",item) 
+                       var rest = (JSON.stringify(item).toLowerCase().indexOf(ft) != -1);
+                        console.log(item,rest);
+                      return rest;
+
+                    });
+                       //console.log("eeeeee",data)              
+                    $scope.setPagingData(data,page,pageSize);
+                  });
               }
             
+            //Se encarga del filtro del sorteo
+          if ($scope.filterSorteo.filterTextSorteo != '')
+              {
+                  
+                  //Se modifica la url para que acepte el caso y el texto que entra en el filtro de busqueda
+                  
+                          var ft = searchText.toLowerCase();
+                          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterSorteo.caso +'&pagina=1&token=2l3qbo7gbroh9qgarilvlcejcs0psegehvo4de8fd4c275oba06s&keyword1=' + $scope.filterSorteo.filterTextSorteo.toString() + '&keyword2=').success(function (largeLoad) {
+                        console.log("entro",largeLoad.results);
+
+                    data = largeLoad.results.filter(function(item) {
+                     //  console.log("imprimiendo",item) 
+                       var rest = (JSON.stringify(item).toLowerCase().indexOf(ft) != -1);
+                        console.log(item,rest);
+                      return rest;
+
+                    });
+                       //console.log("eeeeee",data)              
+                    $scope.setPagingData(data,page,pageSize);
+                  });
+              }
             
-          var ft = searchText.toLowerCase();
-          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=3i9386uchpaja0a1qkdhqb68464cgblap2chvmu5li4d4kireg74&keyword1=&keyword2=').success(function (largeLoad) {
-              console.log("asdwww",largeLoad.results);
+          /*  if ($scope.filterAsesor.filterTextAsesor != '')
+              {
+                  
+                  //Se modifica la url para que acepte el caso y el texto que entra en el filtro de busqueda
+                  
+                          var ft = searchText.toLowerCase();
+                          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterAsesor.caso +'&pagina=1&token=2l3qbo7gbroh9qgarilvlcejcs0psegehvo4de8fd4c275oba06s&keyword1=' + $scope.filterAsesor.filterTextAsesor.toString() + '&keyword2=').success(function (largeLoad) {
+                        console.log("entroAsesor",largeLoad.results);
+
+                    data = largeLoad.results.filter(function(item) {
+                     //  console.log("imprimiendo",item) 
+                       var rest = (JSON.stringify(item).toLowerCase().indexOf(ft) != -1);
+                        console.log(item,rest);
+                      return rest;
+
+                    });
+                       //console.log("eeeeee",data)              
+                    $scope.setPagingData(data,page,pageSize);
+                  });
+              }*/
             
-            data = largeLoad.results.filter(function(item) {
-             //  console.log("imprimiendo",item) 
-               var rest = (JSON.stringify(item).toLowerCase().indexOf(ft) != -1);
-                console.log(item,rest);
-              return rest;
-                
-            });
-               //console.log("eeeeee",data)              
-            $scope.setPagingData(data,page,pageSize);
+          
+        } else {
+          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=2l3qbo7gbroh9qgarilvlcejcs0psegehvo4de8fd4c275oba06s&keyword1=&keyword2=').success(function (largeLoad) {
+            $scope.setPagingData(largeLoad,page,pageSize);
+              
+              
+              
           });
             
-        } else {
-          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=3i9386uchpaja0a1qkdhqb68464cgblap2chvmu5li4d4kireg74&keyword1=&keyword2=').success(function (largeLoad) {
-            $scope.setPagingData(largeLoad,page,pageSize);
+            $http.get('http://localhost:8084/war/jaxrs/sorteo/all?keyword=').success(function (largeLoad) {
+            //$scope.setPagingData(largeLoad,page,pageSize);
+              console.log("esta es la data", largeLoad.data[0].codigo);
+          
+                
+                var comboSorteo = document.getElementById("comboFiltroSorteo");
+                //comboSorteo.options.length = 0;
+                
+                for(var i = 0, data2 = largeLoad.data.length; i< data2; i++){
+                    
+                    //console.log("este es el codigo", largeLoad.data[i].codigo);
+                var option = document.createElement("option");
+                option.text = largeLoad.data[i].codigo;
+                
+                comboSorteo.appendChild(option);
+                    
+                }
+                
+                
+              
+              
           });
         }
       }, 100);
@@ -167,12 +222,36 @@
 
     $scope.$watch('pagingOptions', function (newVal, oldVal) {
       
+        var filtro =$scope.filterOptions.filterText;
+        
+        
+        if($scope.filterOptions.filterText != '')
+            {        
+              filtro = $scope.filterOptions.filterText;
+               // alert ("hola");
+                //document.getElementById("comboSorteo").selectedIndex = -1;
+                
+            }
+        if($scope.filterSorteo.filterTextSorteo != '')
+            {
+                filtro = $scope.filterSorteo.filterTextSorteo;
+            }
+       /* if($scope.filterAsesor.filterTextAsesor != '')
+            {
+                filtro = $scope.filterAsesor.filterTextAsesor;
+            }*/
+        
       if (newVal !== oldVal && newVal.currentPage !== oldVal.currentPage) {
-        $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
+        $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, filtro);
        
       }       
     }, true);
+     
+     
 
+     
+     
+     
     
     $scope.$watch('filterOptions', function (newVal, oldVal) {
         //Con esto regresa a la pagina 1 y realiza la busqueda, significa que cada vez que busque, siempre quedara en la pagina 1
@@ -180,19 +259,25 @@
         $scope.pagingOptions.currentPage = 1;
       if (newVal !== oldVal) {
           //$scope.pagingOptions.currentPage = 1;
+          document.getElementById("comboFiltroSorteo").selectedIndex = -1;
+       //   document.getElementById("filtroAsesor").text = "";
+          
+          
         $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
       }
     }, true);
      
-     $scope.$watch('filterAsesor', function (newVal, oldVal) {
+    /* $scope.$watch('filterAsesor', function (newVal, oldVal) {
         //Con esto regresa a la pagina 1 y realiza la busqueda, significa que cada vez que busque, siempre quedara en la pagina 1
         
         $scope.pagingOptions.currentPage = 1;
       if (newVal !== oldVal) {
+          document.getElementById("comboFiltroSorteo").selectedIndex = -1;
+          document.getElementById("filtroTodos").text = "";
           //$scope.pagingOptions.currentPage = 1;
-        $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterAsesor.filterText);
+        $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterAsesor.filterTextAsesor);
       }
-    }, true);
+    }, true);*/
      
      $scope.$watch('filterSorteo', function (newVal, oldVal) {
         //Con esto regresa a la pagina 1 y realiza la busqueda, significa que cada vez que busque, siempre quedara en la pagina 1
@@ -200,7 +285,10 @@
         $scope.pagingOptions.currentPage = 1;
       if (newVal !== oldVal) {
           //$scope.pagingOptions.currentPage = 1;
-        $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterSorteo.filterText);
+          console.log("aqui aqui");
+          document.getElementById("filtroTodos").value = "";
+        //  document.getElementById("filtroAsesor").text = "";
+        $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterSorteo.filterTextSorteo);
       }
     }, true);
      

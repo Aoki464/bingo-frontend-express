@@ -23,10 +23,13 @@
        <div align="center">
             <!--     Con esto se realiza el filtrado o busqueda de usuario    -->
            <strong>Buscar por     </strong>
-           <strong>Todos:</strong><input type="text" ng-model="filterOptions.filterText" />
-           <strong>Asesor:</strong><input type="text" ng-model="filterAsesor.filterTextAsesor" />
-           <strong>Sorteo:</strong><input type="text" ng-model="filterSorteo.filterTextSorteo" />
-          
+           <strong>Todos:</strong><input type="text" id="filtroTodos" ng-model="filterOptions.filterText" />
+<!--           <strong>Asesor:</strong><input type="text" id ="filtroAsesor" ng-model="filterAsesor.filterTextAsesor" />-->
+           
+           
+           <div class="dropdown">
+               <strong>Sorteo:</strong> <Select class="btn btn-primary dropdown-toggle" type= "button" id="comboFiltroSorteo" ng-model="filterSorteo.filterTextSorteo" ></Select>
+           </div>
            
            
              <div class="gridStyle" ng-grid="gridOptions" id="exportable"></div>
