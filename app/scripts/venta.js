@@ -120,10 +120,10 @@
           
         if (searchText) {       
             console.log ("lo que ahi aqui", $scope.filterOptions.filterText);
-              if ($scope.filterOptions.filterText != '' & $scope.filterOptions.filterText != null)
+              if ($scope.filterOptions.filterText != '')
               {
                   var ft = searchText.toLowerCase();
-                  $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=2l3qbo7gbroh9qgarilvlcejcs0psegehvo4de8fd4c275oba06s&keyword1=&keyword2=').success(function (largeLoad) {
+                  $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=3jfuhpqilm1o1h5kt8i5lf8lou7slcksn2k5lhaqnqts2iq16j9f&keyword1=&keyword2=').success(function (largeLoad) {
                       console.log("asdwww",largeLoad.results);
 
                     data = largeLoad.results.filter(function(item) {
@@ -145,7 +145,7 @@
                   //Se modifica la url para que acepte el caso y el texto que entra en el filtro de busqueda
                   
                           var ft = searchText.toLowerCase();
-                          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterSorteo.caso +'&pagina=1&token=2l3qbo7gbroh9qgarilvlcejcs0psegehvo4de8fd4c275oba06s&keyword1=' + $scope.filterSorteo.filterTextSorteo.toString() + '&keyword2=').success(function (largeLoad) {
+                          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterSorteo.caso +'&pagina=1&token=3jfuhpqilm1o1h5kt8i5lf8lou7slcksn2k5lhaqnqts2iq16j9f&keyword1=' + $scope.filterSorteo.filterTextSorteo.toString() + '&keyword2=').success(function (largeLoad) {
                         console.log("entro",largeLoad.results);
 
                     data = largeLoad.results.filter(function(item) {
@@ -183,7 +183,7 @@
             
           
         } else {
-          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=2l3qbo7gbroh9qgarilvlcejcs0psegehvo4de8fd4c275oba06s&keyword1=&keyword2=').success(function (largeLoad) {
+          $http.get('http://localhost:8084/war/jaxrs/venta?caso=' + $scope.filterOptions.caso +'&pagina=1&token=3jfuhpqilm1o1h5kt8i5lf8lou7slcksn2k5lhaqnqts2iq16j9f&keyword1=&keyword2=').success(function (largeLoad) {
             $scope.setPagingData(largeLoad,page,pageSize);
               
               
@@ -259,12 +259,17 @@
         $scope.pagingOptions.currentPage = 1;
       if (newVal !== oldVal) {
           //$scope.pagingOptions.currentPage = 1;
-          document.getElementById("comboFiltroSorteo").selectedIndex = -1;
-       //   document.getElementById("filtroAsesor").text = "";
+         
+          
+          
+         $scope.filterSorteo.filterTextSorteo = ""; 
+          
           
           
         $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
+          
       }
+           
     }, true);
      
     /* $scope.$watch('filterAsesor', function (newVal, oldVal) {
@@ -278,21 +283,28 @@
         $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterAsesor.filterTextAsesor);
       }
     }, true);*/
-     
+    
+         
      $scope.$watch('filterSorteo', function (newVal, oldVal) {
         //Con esto regresa a la pagina 1 y realiza la busqueda, significa que cada vez que busque, siempre quedara en la pagina 1
-        
+       
+           
+       
         $scope.pagingOptions.currentPage = 1;
       if (newVal !== oldVal) {
           //$scope.pagingOptions.currentPage = 1;
           console.log("aqui aqui");
-          document.getElementById("filtroTodos").value = "";
-        //  document.getElementById("filtroAsesor").text = "";
+                     
+          $scope.filterOptions.filterText =  "";
+                     
+          
         $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterSorteo.filterTextSorteo);
+          
       }
+   
     }, true);
      
-     
+      
      
      
 
@@ -345,7 +357,7 @@
             save:save,
             update: update,
             read:read,
-            readList: readList,
+            exportList: exportList,
             erase: erase
                         
         };
@@ -396,14 +408,58 @@
             
         };
        
-        function readList(){          
+        function exportList(){          
         
      
-          
+             /*  $http({
+             method : 'post',           
+             url : 'http://localhost:8084/war/jaxrs/venta/exportar?nombre=VENTAS&encabezados=Sorteo%2CFecha%2CAsesor%2CTablas%2CSerie%2C&token=3jfuhpqilm1o1h5kt8i5lf8lou7slcksn2k5lhaqnqts2iq16j9f',  
+             headers:{'Access-Control-Allow-Credentials': 'true'}
+       }).success(function(data, status, headers, config) {
+             $scope.status = status;
+           // La linea siguiente, vincula el javascript con la vista html para motrar datos
+            // $scope.listaVenta = data;           
+           console.log("Consumo ok");            
+           //$scope.usuario = data;
+           console.log(data);
+            if (data.id == "" || data.id == null || data.id == undefined)
+            {                           
+                alert("Esta venta no existe");
+                
+                //$scope.venta.id = data.id;
+                
+                alert(data.id);                
+                
+            }
+           else
+           {      
+               $scope.venta = data;
+               alert(data.id);
+           }
+       }).error(function(data, status, headers, config) {
+             $scope.data = data || "Peticion fallida";
+             $scope.status = status;             
+       });*/
     
+            $http.post('http://localhost:8084/war/jaxrs/venta/exportar?nombre=VENTAS&encabezados=Sorteo%2CFecha%2CAsesor%2CTablas%2CSerie%2C&token=3jfuhpqilm1o1h5kt8i5lf8lou7slcksn2k5lhaqnqts2iq16j9f').then(function(response) {
+             $scope.status = status;
+           // La linea siguiente, vincula el javascript con la vista html para motrar datos
+            // $scope.listaVenta = data;           
+           console.log("Consumo ok");            
+           //$scope.usuario = data;
+           console.log(response.data);
+                //Con esto usa la respuesta que recibe de la consulta y realiza la descarga del archivo
+                document.location=response.data.moreInfo;
+                
+                
             
+           
+       }, function(data, status, headers, config) {
+             $scope.data = data || "Peticion fallida";
+             $scope.status = status;             
+       });
             
-};
+        };
            
 //console.log("aaaaassdsdsdsd" + $scope.gridOptions.pagingOptions.pageSizes[0]);
        
